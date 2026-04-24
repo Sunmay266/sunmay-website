@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>森美中醫診所 Sunmay TCM Clinic</title>
+    <link>https://www.sunmay266.com</link>
+    <description>台北大安區中醫診所，李俊儀中醫師主理。提供中醫減重、超微針刀、針灸、美顏針、婦科調理等專業療程。</description>
+    <language>zh-tw</language>
+    <lastBuildDate>Thu, 24 Apr 2026 08:00:00 +0800</lastBuildDate>
+    <atom:link href="https://www.sunmay266.com/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>森美中醫診所正式開業｜台北大安區中醫新選擇</title>
+      <link>https://www.sunmay266.com</link>
+      <description>森美中醫診所（Sunmay TCM Clinic）位於台北市大安區仁愛路四段，由李俊儀中醫師主持。用數據把脈，用溫度開方，提供中醫減重、超微針刀、針灸、美顏針、埋線、婦科調理、外泌體養髮、小兒轉骨等專業療程。</description>
+      <pubDate>Tue, 22 Apr 2026 08:00:00 +0800</pubDate>
+      <guid isPermaLink="true">https://www.sunmay266.com</guid>
+    </item>
+
+  </channel>
+</rss>

@@ -173,16 +173,18 @@ nav {
 
 .nav-line-btn {
   display: none;
+  flex-direction: column;
   align-items: center;
   background: var(--green);
   color: #fff;
   border-radius: 5px;
-  padding: 0.35rem 0.65rem;
-  font-size: 0.72rem; font-weight: 600;
+  padding: 0.28rem 0.6rem;
+  font-size: 0.68rem; font-weight: 600;
   text-decoration: none; letter-spacing: 0.04em;
+  line-height: 1.35;
   transition: background 0.2s;
-  white-space: nowrap;
   flex-shrink: 0;
+  text-align: center;
 }
 .nav-line-btn:hover { background: var(--green-dark); }
 
@@ -877,6 +879,8 @@ footer {
   .nav-links { display: none; }
   .nav-line-btn { display: flex; }
   .hamburger { display: flex; }
+  .nav-inner { padding: 0 1rem; gap: 0; justify-content: space-between; }
+  .nav-logo img { height: 36px !important; }
   section { padding: 4rem 0; }
   .hero-left { padding: 3rem 1.5rem; }
   .hero-stat-row { gap: 1.5rem; }
@@ -909,7 +913,7 @@ footer {
       <li><a href="https://gptcm.tw/GPNET/MainGo?CID=MBTCM" target="_blank" rel="noopener" class="nav-cta">立即預約</a></li>
     </ul>
 
-    <a href="https://line.me/R/ti/p/@068ohdvi" target="_blank" rel="noopener" class="nav-line-btn" aria-label="LINE 官方帳號線上預約">LINE 預約</a>
+    <a href="https://line.me/R/ti/p/@068ohdvi" target="_blank" rel="noopener" class="nav-line-btn" aria-label="LINE 官方帳號線上預約"><span>LINE</span><span>預約</span></a>
 
     <button class="hamburger" id="hamburger" aria-label="開啟選單" aria-expanded="false">
       <span></span><span></span><span></span>

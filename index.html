@@ -827,6 +827,20 @@ footer {
   font-size: 0.72rem; color: rgba(232,224,212,0.35);
 }
 
+.float-social {
+  position: fixed; right: 1rem; bottom: 5rem;
+  display: flex; flex-direction: column; gap: 0.6rem; z-index: 999;
+}
+.float-social a {
+  width: 50px; height: 50px; border-radius: 50%;
+  background: var(--green);
+  display: flex; align-items: center; justify-content: center;
+  color: white; text-decoration: none;
+  box-shadow: 0 4px 14px rgba(64,114,72,0.45);
+  transition: transform 0.2s, background 0.2s;
+}
+.float-social a:hover { background: var(--green-dark); transform: scale(1.08); }
+
 /* MOBILE NAV */
 .mobile-menu {
   display: none; flex-direction: column;
@@ -1684,9 +1698,20 @@ footer {
     <div class="footer-bottom">
       <p>© 2026 森美中醫診所 Sunmay TCM Clinic. All rights reserved.</p>
       <p>台北市大安區 · 李俊儀中醫師主理 · 02-2701-0768</p>
+      <p>累積人氣：<span id="page-counter">—</span></p>
     </div>
   </div>
 </footer>
+
+<!-- FLOATING SOCIAL BUTTONS -->
+<div class="float-social" aria-label="社群媒體快速連結">
+  <a href="https://www.facebook.com/profile.php?id=61588947069225" target="_blank" rel="noopener" aria-label="Facebook">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+  <a href="https://www.instagram.com/sunmay266" target="_blank" rel="noopener" aria-label="Instagram">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="white" stroke="none"/></svg>
+  </a>
+</div>
 
 <script>
 // HAMBURGER MENU
@@ -1704,6 +1729,18 @@ function closeMobile() {
   hamburger.setAttribute('aria-expanded', false);
   document.body.style.overflow = '';
 }
+
+// PAGEVIEW COUNTER
+fetch('/api/counter')
+  .then(r => r.json())
+  .then(data => {
+    const el = document.getElementById('page-counter');
+    if (el) el.textContent = Number(data.count).toLocaleString();
+  })
+  .catch(() => {
+    const el = document.getElementById('page-counter');
+    if (el) el.textContent = '888+';
+  });
 
 
 // FAQ ACCORDION

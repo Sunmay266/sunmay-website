@@ -656,27 +656,30 @@ section { padding: 6rem 0; }
 }
 
 .hours-table th {
-  font-size: 0.72rem; letter-spacing: 0.12em;
-  color: var(--sand); font-weight: 400;
-  padding: 0.6rem 0; border-bottom: 1px solid rgba(173,162,141,0.3);
-  text-align: left;
+  font-family: var(--serif); font-weight: 400; font-size: 0.82rem;
+  color: var(--text-dark); padding: 14px 12px;
+  text-align: center; border-bottom: 1px solid rgba(173,162,141,0.15);
 }
 
+.hours-table th:first-child { width: 28%; text-align: left; }
+
 .hours-table td {
-  padding: 0.8rem 0; font-size: 0.85rem;
-  color: var(--text-mid); border-bottom: 1px solid rgba(173,162,141,0.12);
-  vertical-align: middle;
+  padding: 14px 12px; text-align: center;
+  border-bottom: 1px solid rgba(173,162,141,0.08);
+  font-size: 0.82rem; color: var(--text-mid);
+}
+
+.hours-table td:first-child {
+  text-align: left; font-weight: 400;
+  color: var(--text-dark); white-space: nowrap;
 }
 
 .hours-table tr:last-child td { border-bottom: none; }
 
-.hour-dot {
+.s-dot {
   display: inline-block; width: 8px; height: 8px;
   border-radius: 50%; background: var(--green);
-  margin-right: 0.5rem; vertical-align: middle;
 }
-
-.hour-dot.closed { background: rgba(173,162,141,0.4); }
 
 .contact-info { margin-top: 2rem; }
 
@@ -1129,6 +1132,127 @@ footer {
   </div>
 </section>
 
+<!-- SCHEDULE & CONTACT -->
+<section class="schedule" id="schedule" aria-labelledby="schedule-title">
+  <div class="container">
+    <div class="schedule-grid">
+      <div>
+        <p class="section-eyebrow">HOURS & CONTACT</p>
+        <h2 class="section-title" id="schedule-title">診療<strong>時間</strong></h2>
+
+        <table class="hours-table" aria-label="森美中醫診所門診時間表">
+          <thead>
+            <tr>
+              <th></th>
+              <th>一</th>
+              <th>二</th>
+              <th>三</th>
+              <th>四</th>
+              <th>五</th>
+              <th>六</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>9:30 – 13:00</td>
+              <td><span class="s-dot"></span></td>
+              <td></td>
+              <td></td>
+              <td><span class="s-dot"></span></td>
+              <td></td>
+              <td><span class="s-dot"></span></td>
+            </tr>
+            <tr>
+              <td>14:00 – 17:30</td>
+              <td><span class="s-dot"></span></td>
+              <td><span class="s-dot"></span></td>
+              <td></td>
+              <td><span class="s-dot"></span></td>
+              <td><span class="s-dot"></span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>18:00 – 21:30</td>
+              <td><span class="s-dot"></span></td>
+              <td><span class="s-dot"></span></td>
+              <td></td>
+              <td><span class="s-dot"></span></td>
+              <td><span class="s-dot"></span></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="contact-info" role="complementary" aria-label="聯絡資訊">
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📍</div>
+            <div>
+              <div class="contact-label">診所地址</div>
+              <div class="contact-value">台北市大安區仁愛路四段266巷15弄20號（國泰醫院後方）</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📞</div>
+            <div>
+              <div class="contact-label">預約電話</div>
+              <div class="contact-value"><a href="tel:0227010768" style="color:var(--green);">02-2701-0768</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">💻</div>
+            <div>
+              <div class="contact-label">線上預約</div>
+              <div class="contact-value">
+                <a href="https://gptcm.tw/GPNET/MainGo?CID=NATCM" target="_blank" rel="noopener" style="color:var(--green);">
+                  gptcm.tw · 網路掛號系統
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true" style="background:rgba(0,185,0,0.1);font-size:1.1rem;"></div>
+            <div>
+              <div class="contact-label">LINE 官方帳號</div>
+              <div class="contact-value">
+                <a href="https://line.me/R/ti/p/@068ohdvi" target="_blank" rel="noopener" style="color:var(--green);display:inline-flex;align-items:center;gap:0.4rem;" onclick="gtag('event','click_line',{'event_category':'contact','event_label':'LINE官方帳號'});">
+                  @068ohdvi · 點此加入諮詢
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">🌐</div>
+            <div>
+              <div class="contact-label">官方網站</div>
+              <div class="contact-value">www.sunmay266.com</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="map-wrap" role="region" aria-label="診所地圖位置">
+          <iframe
+            src="https://maps.google.com/maps?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E4%BB%81%E6%84%9B%E8%B7%AF%E5%9B%9B%E6%AE%B5266%E5%B7%B715%E5%BC%8420%E8%99%9F&output=embed&zoom=17"
+            title="森美中醫診所 Google 地圖"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            aria-label="森美中醫診所位於台北市大安區仁愛路四段的地圖"
+          ></iframe>
+        </div>
+
+        <div class="booking-cta-box" role="complementary" aria-label="線上預約">
+          <h3>立即預約，開始您的療癒旅程</h3>
+          <p>24小時線上掛號，選擇最適合您的診次時間</p>
+          <a href="https://gptcm.tw/GPNET/MainGo?CID=NATCM" target="_blank" rel="noopener" class="btn-book" aria-label="前往線上掛號系統預約李俊儀中醫師門診">
+            🗓 線上掛號預約
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- TREATMENTS -->
 <section class="treatments" id="treatments" aria-labelledby="treatments-title">
   <div class="container">
@@ -1417,127 +1541,6 @@ footer {
     <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn-google" aria-label="前往 Google Maps 撰寫評論">
       ⭐ 在 Google 地圖留下您的評價
     </a>
-  </div>
-</section>
-
-<!-- SCHEDULE & CONTACT -->
-<section class="schedule" id="schedule" aria-labelledby="schedule-title">
-  <div class="container">
-    <div class="schedule-grid">
-      <div>
-        <p class="section-eyebrow">HOURS & CONTACT</p>
-        <h2 class="section-title" id="schedule-title">診療<strong>時間</strong></h2>
-
-        <table class="hours-table" aria-label="森美中醫診所門診時間表" style="margin-top:1.5rem;border-collapse:collapse;width:100%;table-layout:fixed;">
-          <thead>
-            <tr>
-              <th style="background:#9aab96;color:white;padding:0.7rem 0.3rem;font-size:0.75rem;font-weight:500;border:1px solid rgba(255,255,255,0.3);text-align:center;width:27%;"></th>
-              <th style="background:var(--green);color:white;padding:0.7rem 0.5rem;font-size:0.9rem;font-weight:500;border:1px solid rgba(255,255,255,0.3);text-align:center;">一</th>
-              <th style="background:var(--green);color:white;padding:0.7rem 0.5rem;font-size:0.9rem;font-weight:500;border:1px solid rgba(255,255,255,0.3);text-align:center;">二</th>
-              <th style="background:var(--green);color:white;padding:0.7rem 0.5rem;font-size:0.9rem;font-weight:500;border:1px solid rgba(255,255,255,0.3);text-align:center;">三</th>
-              <th style="background:var(--green);color:white;padding:0.7rem 0.5rem;font-size:0.9rem;font-weight:500;border:1px solid rgba(255,255,255,0.3);text-align:center;">四</th>
-              <th style="background:var(--green);color:white;padding:0.7rem 0.5rem;font-size:0.9rem;font-weight:500;border:1px solid rgba(255,255,255,0.3);text-align:center;">五</th>
-              <th style="background:var(--green);color:white;padding:0.7rem 0.5rem;font-size:0.9rem;font-weight:500;border:1px solid rgba(255,255,255,0.3);text-align:center;">六</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="background:#b8c9b4;color:var(--green-dark);font-weight:600;padding:0.75rem 0.3rem;font-size:1.17rem;border:1px solid rgba(255,255,255,0.4);text-align:center;">9:30–13:00</td>
-              <td style="text-align:center;vertical-align:middle;padding:0.6rem 0.2rem;border:1px solid rgba(173,162,141,0.2);font-size:1rem;line-height:1;">🌱</td>
-              <td style="text-align:center;vertical-align:middle;padding:0.6rem 0.2rem;border:1px solid rgba(173,162,141,0.2);"></td>
-              <td style="text-align:center;vertical-align:middle;padding:0.6rem 0.2rem;border:1px solid rgba(173,162,141,0.2);"></td>
-              <td style="text-align:center;vertical-align:middle;padding:0.6rem 0.2rem;border:1px solid rgba(173,162,141,0.2);font-size:1rem;line-height:1;">🌱</td>
-              <td style="text-align:center;vertical-align:middle;padding:0.6rem 0.2rem;border:1px solid rgba(173,162,141,0.2);"></td>
-              <td style="text-align:center;vertical-align:middle;padding:0.6rem 0.2rem;border:1px solid rgba(173,162,141,0.2);font-size:1rem;line-height:1;">🌱</td>
-            </tr>
-            <tr>
-              <td style="background:#b8c9b4;color:var(--green-dark);font-weight:600;padding:0.75rem 0.3rem;font-size:1.17rem;border:1px solid rgba(255,255,255,0.4);text-align:center;">14:00–17:30</td>
-              <td style="text-align:center;vertical-align:middle;padding:0.6rem 0.2rem;border:1px solid rgba(173,162,141,0.2);font-size:1rem;line-height:1;">🌱</td>
-              <td style="text-align:center;vertical-align:middle;padding:0.6rem 0.2rem;border:1px solid rgba(173,162,141,0.2);font-size:1rem;line-height:1;">🌱</td>
-              <td style="text-align:center;vertical-align:middle;padding:0.6rem 0.2rem;border:1px solid rgba(173,162,141,0.2);"></td>
-              <td style="text-align:center;vertical-align:middle;padding:0.6rem 0.2rem;border:1px solid rgba(173,162,141,0.2);font-size:1rem;line-height:1;">🌱</td>
-              <td style="text-align:center;vertical-align:middle;padding:0.6rem 0.2rem;border:1px solid rgba(173,162,141,0.2);font-size:1rem;line-height:1;">🌱</td>
-              <td style="text-align:center;vertical-align:middle;padding:0.6rem 0.2rem;border:1px solid rgba(173,162,141,0.2);"></td>
-            </tr>
-            <tr>
-              <td style="background:#b8c9b4;color:var(--green-dark);font-weight:600;padding:0.75rem 0.3rem;font-size:1.17rem;border:1px solid rgba(255,255,255,0.4);text-align:center;">18:00–21:30</td>
-              <td style="text-align:center;vertical-align:middle;padding:0.6rem 0.2rem;border:1px solid rgba(173,162,141,0.2);font-size:1rem;line-height:1;">🌱</td>
-              <td style="text-align:center;vertical-align:middle;padding:0.6rem 0.2rem;border:1px solid rgba(173,162,141,0.2);font-size:1rem;line-height:1;">🌱</td>
-              <td style="text-align:center;vertical-align:middle;padding:0.6rem 0.2rem;border:1px solid rgba(173,162,141,0.2);"></td>
-              <td style="text-align:center;vertical-align:middle;padding:0.6rem 0.2rem;border:1px solid rgba(173,162,141,0.2);font-size:1rem;line-height:1;">🌱</td>
-              <td style="text-align:center;vertical-align:middle;padding:0.6rem 0.2rem;border:1px solid rgba(173,162,141,0.2);font-size:1rem;line-height:1;">🌱</td>
-              <td style="text-align:center;vertical-align:middle;padding:0.6rem 0.2rem;border:1px solid rgba(173,162,141,0.2);"></td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="contact-info" role="complementary" aria-label="聯絡資訊">
-          <div class="contact-item">
-            <div class="contact-icon" aria-hidden="true">📍</div>
-            <div>
-              <div class="contact-label">診所地址</div>
-              <div class="contact-value">台北市大安區仁愛路四段266巷15弄20號（國泰醫院後方）</div>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon" aria-hidden="true">📞</div>
-            <div>
-              <div class="contact-label">預約電話</div>
-              <div class="contact-value"><a href="tel:0227010768" style="color:var(--green);">02-2701-0768</a></div>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon" aria-hidden="true">💻</div>
-            <div>
-              <div class="contact-label">線上預約</div>
-              <div class="contact-value">
-                <a href="https://gptcm.tw/GPNET/MainGo?CID=NATCM" target="_blank" rel="noopener" style="color:var(--green);">
-                  gptcm.tw · 網路掛號系統
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon" aria-hidden="true" style="background:rgba(0,185,0,0.1);font-size:1.1rem;"></div>
-            <div>
-              <div class="contact-label">LINE 官方帳號</div>
-              <div class="contact-value">
-                <a href="https://line.me/R/ti/p/@068ohdvi" target="_blank" rel="noopener" style="color:var(--green);display:inline-flex;align-items:center;gap:0.4rem;" onclick="gtag('event','click_line',{'event_category':'contact','event_label':'LINE官方帳號'});">
-                  @068ohdvi · 點此加入諮詢
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon" aria-hidden="true">🌐</div>
-            <div>
-              <div class="contact-label">官方網站</div>
-              <div class="contact-value">www.sunmay266.com</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <div class="map-wrap" role="region" aria-label="診所地圖位置">
-          <iframe
-            src="https://maps.google.com/maps?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E4%BB%81%E6%84%9B%E8%B7%AF%E5%9B%9B%E6%AE%B5266%E5%B7%B715%E5%BC%8420%E8%99%9F&output=embed&zoom=17"
-            title="森美中醫診所 Google 地圖"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            aria-label="森美中醫診所位於台北市大安區仁愛路四段的地圖"
-          ></iframe>
-        </div>
-
-        <div class="booking-cta-box" role="complementary" aria-label="線上預約">
-          <h3>立即預約，開始您的療癒旅程</h3>
-          <p>24小時線上掛號，選擇最適合您的診次時間</p>
-          <a href="https://gptcm.tw/GPNET/MainGo?CID=NATCM" target="_blank" rel="noopener" class="btn-book" aria-label="前往線上掛號系統預約李俊儀中醫師門診">
-            🗓 線上掛號預約
-          </a>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 

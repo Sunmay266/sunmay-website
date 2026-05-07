@@ -413,7 +413,16 @@ section { padding: 6rem 0; }
 }
 
 /* DOCTOR */
-.doctor { background: var(--cream-light); }
+.doctor { background: var(--green-dark); }
+.doctor .section-eyebrow { color: rgba(232,224,212,0.55); }
+.doctor .section-eyebrow::before { background: rgba(232,224,212,0.35); }
+.doctor .section-title { color: var(--cream); }
+.doctor .section-title strong { color: var(--cream-light); }
+.doctor .doctor-name { color: var(--cream); }
+.doctor .doctor-title-tag { color: rgba(232,224,212,0.55); }
+.doctor .doctor-bio p { color: rgba(232,224,212,0.75); }
+.doctor .doctor-cert { color: rgba(232,224,212,0.75); border-bottom-color: rgba(232,224,212,0.12); }
+.doctor .doctor-photo-wrap::before { border-color: rgba(232,224,212,0.18); }
 
 .doctor-inner {
   display: grid; grid-template-columns: 420px 1fr;
@@ -484,27 +493,23 @@ section { padding: 6rem 0; }
 }
 
 /* TREATMENTS */
-.treatments { background: var(--green-dark); color: var(--cream); }
-
-.treatments .section-title { color: var(--cream); }
-.treatments .section-eyebrow { color: rgba(232,224,212,0.6); }
-.treatments .section-eyebrow::before { background: rgba(232,224,212,0.4); }
+.treatments { background: var(--cream-light); }
 
 .treatments-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5px; margin-top: 3rem;
-  background: rgba(255,255,255,0.08);
+  background: rgba(173,162,141,0.2);
 }
 
 .treatment-card {
-  background: rgba(45,82,53,0.7);
+  background: var(--white);
   padding: 2rem 1.5rem;
   transition: background 0.3s;
   cursor: default;
 }
 
-.treatment-card:hover { background: rgba(90,148,102,0.25); }
+.treatment-card:hover { background: rgba(64,114,72,0.06); }
 
 .treatment-icon {
   font-size: 1.8rem; margin-bottom: 1rem;
@@ -513,18 +518,18 @@ section { padding: 6rem 0; }
 
 .treatment-name {
   font-size: 1.2rem; font-weight: 600;
-  color: var(--cream); margin-bottom: 0.5rem;
+  color: var(--green-dark); margin-bottom: 0.5rem;
 }
 
 .treatment-desc {
-  font-size: 1rem; color: rgba(232,224,212,0.6);
+  font-size: 1rem; color: var(--text-mid);
   line-height: 1.6;
 }
 
 .treatment-tag {
   display: inline-block; margin-top: 1rem;
   font-size: 0.85rem; letter-spacing: 0.12em;
-  color: var(--green-light); border: 1px solid rgba(90,148,102,0.4);
+  color: var(--green); border: 1px solid rgba(64,114,72,0.3);
   padding: 0.25rem 0.6rem; border-radius: 3px;
 }
 

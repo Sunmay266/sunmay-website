@@ -1,9 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.sunmay266.com/</loc>
-    <lastmod>2026-04-28</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+
+    <image:image>
+      <image:loc>https://www.sunmay266.com/images/Logo_1080x1080.png</image:loc>
+      <image:title>森美中醫診所 Sunmay TCM Clinic Logo</image:title>
+      <image:caption>森美中醫診所｜台北市大安區中醫診所，李俊儀院長主理</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.sunmay266.com/images/img_jpeg_01.jpg</image:loc>
+      <image:title>森美中醫診所候診空間</image:title>
+      <image:caption>森美中醫診所候診空間—木質接待台與環形座椅，溫暖自然氛圍</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.sunmay266.com/images/img_jpeg_02.jpg</image:loc>
+      <image:title>森美中醫診所候診區</image:title>
+      <image:caption>森美中醫診所候診區—落地窗、木質長椅與自然採光的療癒空間</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.sunmay266.com/images/img_jpeg_05.jpg</image:loc>
+      <image:title>森美中醫診所中央大廳</image:title>
+      <image:caption>森美中醫診所中央大廳—圓形木質座椅、大型植栽與環形燈飾，呈現自然療癒氛圍</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.sunmay266.com/images/img_jpeg_06.jpg</image:loc>
+      <image:title>森美中醫診所接待前台</image:title>
+      <image:caption>森美中醫診所接待前台—木紋弧形吧台與掛牆診所名稱字樣</image:caption>
+    </image:image>
   </url>
 </urlset>

@@ -1,2 +1,4 @@
 extract_images.py
 .DS_Store
+.claude/
+.wrangler/

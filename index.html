@@ -24,6 +24,16 @@
 <meta property="og:image" content="https://www.sunmay266.com/images/Logo_1080x1080.png">
 <meta property="og:image:width" content="1080">
 <meta property="og:image:height" content="1080">
+<meta property="og:site_name" content="森美中醫診所">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="森美中醫診所｜李俊儀院長">
+<meta name="twitter:description" content="用數據把脈，用溫度開方。台北大安區高端中醫診所，李俊儀中醫師主理。">
+<meta name="twitter:image" content="https://www.sunmay266.com/images/Logo_1080x1080.png">
+<meta name="author" content="森美中醫診所">
+<meta name="geo.region" content="TW-TPE">
+<meta name="geo.placename" content="台北市大安區">
+<meta name="ICBM" content="25.033, 121.545">
 <link rel="canonical" href="https://www.sunmay266.com/">
 <link rel="icon" type="image/png" href="images/Logo(1080x1080)only.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,106 +43,189 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "MedicalClinic",
-  "name": "森美中醫診所",
-  "alternateName": "Sunmay TCM Clinic",
-  "url": "https://www.sunmay266.com",
-  "telephone": "02-2701-0768",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "仁愛路四段266巷15弄20號",
-    "addressLocality": "大安區",
-    "addressRegion": "台北市",
-    "postalCode": "10685",
-    "addressCountry": "TW"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 25.033,
-    "longitude": 121.545
-  },
-  "openingHoursSpecification": [
-    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Thursday"],"opens":"10:00","closes":"13:30"},
-    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Thursday","Friday"],"opens":"14:00","closes":"17:30"},
-    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Thursday","Friday"],"opens":"18:00","closes":"21:00"},
-    {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"09:30","closes":"13:00"}
-  ],
-  "medicalSpecialty": ["Traditional Chinese Medicine","Acupuncture","Weight Management"],
-  "physician": {
-    "@type": "Physician",
-    "name": "李俊儀",
-    "honorificPrefix": "中醫師",
-    "worksFor": {"@type": "MedicalClinic","name": "森美中醫診所"}
-  },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "診療項目",
-    "itemListElement": [
-      {"@type":"Offer","itemOffered":{"@type":"MedicalTherapy","name":"中醫減重"}},
-      {"@type":"Offer","itemOffered":{"@type":"MedicalTherapy","name":"超微針刀"}},
-      {"@type":"Offer","itemOffered":{"@type":"MedicalTherapy","name":"針灸療程"}},
-      {"@type":"Offer","itemOffered":{"@type":"MedicalTherapy","name":"美顏針"}},
-      {"@type":"Offer","itemOffered":{"@type":"MedicalTherapy","name":"埋線療程"}},
-      {"@type":"Offer","itemOffered":{"@type":"MedicalTherapy","name":"婦科調理"}},
-      {"@type":"Offer","itemOffered":{"@type":"MedicalTherapy","name":"外泌體養髮"}},
-      {"@type":"Offer","itemOffered":{"@type":"MedicalTherapy","name":"小兒轉骨"}}
-    ]
-  }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "第一次就診需要準備什麼？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "初次就診建議攜帶健保卡，並提前完成線上掛號。如有相關病歷資料（醫學影像檔案、血液檢查報告、用藥紀錄等）可一併帶來供醫師參考。請盡量穿著寬鬆衣物以便於針灸療程。初診時間較長，約 30 分鐘，請預留充裕時間。"
+      "@type": "Organization",
+      "@id": "https://www.sunmay266.com/#organization",
+      "name": "森美中醫診所",
+      "alternateName": "Sunmay TCM Clinic",
+      "url": "https://www.sunmay266.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://www.sunmay266.com/#logo",
+        "url": "https://www.sunmay266.com/images/Logo_1080x1080.png",
+        "width": 1080,
+        "height": 1080,
+        "caption": "森美中醫診所 Sunmay TCM Clinic Logo"
+      },
+      "image": {"@id": "https://www.sunmay266.com/#logo"},
+      "telephone": "02-2701-0768",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+886-2-2701-0768",
+        "contactType": "customer service",
+        "areaServed": "TW",
+        "availableLanguage": ["zh-TW"]
+      },
+      "sameAs": [
+        "https://www.instagram.com/sunmay266",
+        "https://www.threads.net/@sunmay266",
+        "https://www.facebook.com/profile.php?id=61588947069225",
+        "https://line.me/R/ti/p/@068ohdvi"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.sunmay266.com/#website",
+      "url": "https://www.sunmay266.com/",
+      "name": "森美中醫診所",
+      "alternateName": "Sunmay TCM Clinic",
+      "description": "森美中醫診所位於台北市大安區國泰醫院正後方，李俊儀院長專精疼痛治療，提供中醫減重、超微針刀、針灸、美顏針、埋線、婦科調理、外泌體養髮、小兒轉骨等服務。",
+      "publisher": {"@id": "https://www.sunmay266.com/#organization"},
+      "inLanguage": "zh-TW"
+    },
+    {
+      "@type": ["WebPage", "MedicalWebPage"],
+      "@id": "https://www.sunmay266.com/#webpage",
+      "url": "https://www.sunmay266.com/",
+      "name": "森美中醫診所｜李俊儀中醫師｜台北大安區中醫減重・針灸・浮針・針刀・美顏針",
+      "isPartOf": {"@id": "https://www.sunmay266.com/#website"},
+      "about": {"@id": "https://www.sunmay266.com/#clinic"},
+      "primaryImageOfPage": {"@id": "https://www.sunmay266.com/#logo"},
+      "breadcrumb": {"@id": "https://www.sunmay266.com/#breadcrumb"},
+      "inLanguage": "zh-TW",
+      "dateModified": "2026-07-07"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.sunmay266.com/#breadcrumb",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://www.sunmay266.com/"},
+        {"@type": "ListItem", "position": 2, "name": "關於森美", "item": "https://www.sunmay266.com/#about"},
+        {"@type": "ListItem", "position": 3, "name": "醫師介紹", "item": "https://www.sunmay266.com/#doctor"},
+        {"@type": "ListItem", "position": 4, "name": "診療時間", "item": "https://www.sunmay266.com/#schedule"},
+        {"@type": "ListItem", "position": 5, "name": "診療項目", "item": "https://www.sunmay266.com/#treatments"},
+        {"@type": "ListItem", "position": 6, "name": "常見問題", "item": "https://www.sunmay266.com/#faq"}
+      ]
+    },
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://www.sunmay266.com/#clinic",
+      "name": "森美中醫診所",
+      "alternateName": "Sunmay TCM Clinic",
+      "url": "https://www.sunmay266.com/",
+      "image": {"@id": "https://www.sunmay266.com/#logo"},
+      "telephone": "02-2701-0768",
+      "parentOrganization": {"@id": "https://www.sunmay266.com/#organization"},
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "仁愛路四段266巷15弄20號",
+        "addressLocality": "大安區",
+        "addressRegion": "台北市",
+        "postalCode": "10685",
+        "addressCountry": "TW"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 25.033,
+        "longitude": 121.545
+      },
+      "hasMap": "https://maps.google.com/?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E4%BB%81%E6%84%9B%E8%B7%AF%E5%9B%9B%E6%AE%B5266%E5%B7%B715%E5%BC%8420%E8%99%9F",
+      "openingHoursSpecification": [
+        {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Thursday"],"opens":"10:00","closes":"13:30"},
+        {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Thursday","Friday"],"opens":"14:00","closes":"17:30"},
+        {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Thursday","Friday"],"opens":"18:00","closes":"21:00"},
+        {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"09:30","closes":"13:00"}
+      ],
+      "medicalSpecialty": ["Traditional Chinese Medicine","Acupuncture","Weight Management"],
+      "physician": {"@id": "https://www.sunmay266.com/#physician"},
+      "sameAs": [
+        "https://www.instagram.com/sunmay266",
+        "https://www.threads.net/@sunmay266",
+        "https://www.facebook.com/profile.php?id=61588947069225",
+        "https://line.me/R/ti/p/@068ohdvi"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "診療項目",
+        "itemListElement": [
+          {"@type":"Offer","itemOffered":{"@type":["MedicalTherapy","Service"],"name":"中醫減重","url":"https://www.sunmay266.com/treatments/weight-loss","provider":{"@id":"https://www.sunmay266.com/#clinic"}}},
+          {"@type":"Offer","itemOffered":{"@type":["MedicalTherapy","Service"],"name":"超微針刀","url":"https://www.sunmay266.com/treatments/acupotomy","provider":{"@id":"https://www.sunmay266.com/#clinic"}}},
+      {"@type":"Offer","itemOffered":{"@type":["MedicalTherapy","Service"],"name":"浮針療法","url":"https://www.sunmay266.com/treatments/fu-needling","provider":{"@id":"https://www.sunmay266.com/#clinic"}}},
+          {"@type":"Offer","itemOffered":{"@type":["MedicalTherapy","Service"],"name":"針灸療程","url":"https://www.sunmay266.com/treatments/acupuncture","provider":{"@id":"https://www.sunmay266.com/#clinic"}}},
+          {"@type":"Offer","itemOffered":{"@type":["MedicalTherapy","Service"],"name":"美顏針","url":"https://www.sunmay266.com/treatments/facial-acupuncture","provider":{"@id":"https://www.sunmay266.com/#clinic"}}},
+          {"@type":"Offer","itemOffered":{"@type":["MedicalTherapy","Service"],"name":"埋線療程","url":"https://www.sunmay266.com/treatments/embedding","provider":{"@id":"https://www.sunmay266.com/#clinic"}}},
+          {"@type":"Offer","itemOffered":{"@type":["MedicalTherapy","Service"],"name":"婦科調理","url":"https://www.sunmay266.com/treatments/gynecology","provider":{"@id":"https://www.sunmay266.com/#clinic"}}},
+          {"@type":"Offer","itemOffered":{"@type":["MedicalTherapy","Service"],"name":"外泌體養髮","url":"https://www.sunmay266.com/treatments/exosome-hair","provider":{"@id":"https://www.sunmay266.com/#clinic"}}},
+          {"@type":"Offer","itemOffered":{"@type":["MedicalTherapy","Service"],"name":"小兒轉骨","url":"https://www.sunmay266.com/treatments/pediatric-growth","provider":{"@id":"https://www.sunmay266.com/#clinic"}}},
+      {"@type":"Offer","itemOffered":{"@type":["MedicalTherapy","Service"],"name":"三伏貼・三九貼","url":"https://www.sunmay266.com/treatments/sanfu-sanjiu","provider":{"@id":"https://www.sunmay266.com/#clinic"}}}
+        ]
       }
     },
     {
-      "@type": "Question",
-      "name": "中醫減重療程需要多久才能看到效果？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "一般患者在第2-4週開始感受到體態改變，完整療程通常為2-3個月。效果因個人體質、生活習慣及配合程度而有所差異。李醫師會先進行體組成分析，依據您的基礎代謝率、體脂率等數據制訂個人化目標，並每次追蹤數據變化調整療程。"
-      }
+      "@type": "Physician",
+      "@id": "https://www.sunmay266.com/#physician",
+      "name": "李俊儀",
+      "honorificPrefix": "中醫師",
+      "jobTitle": "院長",
+      "worksFor": {"@id": "https://www.sunmay266.com/#clinic"},
+      "medicalSpecialty": ["Traditional Chinese Medicine","Acupuncture","Weight Management"]
     },
     {
-      "@type": "Question",
-      "name": "美顏針與一般針灸有什麼不同？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "美顏針（Facial Acupuncture）是專門針對臉部的針灸技術，使用比傳統針灸更細的針具，刺激臉部特定穴位與肌肉，促進膠原蛋白生成、改善血液循環，達到自然提拉、淡化細紋的效果。整個療程安全且無恢復期，是侵入式醫美的天然替代選擇。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "超微針刀與一般針灸、推拿有何區別？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "超微針刀是一種極精細的針刀技術，針具直徑極小，可精確切割、鬆解筋膜沾黏點，對於慢性疼痛、筋膜炎、網球肘、媽媽手等問題效果卓著。相較於傳統推拿，超微針刀可直接作用於深層沾黏組織；相較於手術，則無需切口，恢復快速。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "小兒轉骨幾歲開始做最適合？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "轉骨調理最佳時機通常為青春期前後：女孩約8-13歲，男孩約10-15歲。建議在骨骺線尚未閉合前開始調理，效果最為顯著。李醫師會依據孩子的發育狀況、骨齡評估制訂個人化的中藥及針灸調理方案，幫助孩子在黃金生長期充分發揮身高潛力。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "外泌體養髮療程適合哪些人？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "外泌體養髮適合有落髮困擾（雄性禿、圓禿、壓力性落髮）、頭皮健康問題，或希望預防性養護頭髮品質的人士。療程結合外泌體生物科技（細胞間傳訊因子）與中醫頭皮經絡調理，從底層促進毛囊再生，相較傳統生髮療程更溫和且效果持久。"
-      }
+      "@type": "FAQPage",
+      "@id": "https://www.sunmay266.com/#faq-schema",
+      "isPartOf": {"@id": "https://www.sunmay266.com/#webpage"},
+      "inLanguage": "zh-TW",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "第一次就診需要準備什麼？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "初次就診建議攜帶健保卡，並提前完成線上掛號。如有相關病歷資料（醫學影像檔案、血液檢查報告、用藥紀錄等）可一併帶來供醫師參考。請盡量穿著寬鬆衣物以便於針灸療程。初診時間較長，約 30 分鐘，請預留充裕時間。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "中醫減重療程需要多久才能看到效果？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "一般患者在第2-4週開始感受到體態改變，完整療程通常為2-3個月。效果因個人體質、生活習慣及配合程度而有所差異。李醫師會先進行體組成分析，依據您的基礎代謝率、體脂率等數據制訂個人化目標，並每次追蹤數據變化調整療程。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "美顏針與一般針灸有什麼不同？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "美顏針（Facial Acupuncture）是專門針對臉部的針灸技術，使用比傳統針灸更細的針具，刺激臉部特定穴位與肌肉，促進膠原蛋白生成、改善血液循環，達到自然提拉、淡化細紋的效果。整個療程安全且無恢復期，是侵入式醫美的天然替代選擇。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "超微針刀與一般針灸、推拿有何區別？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "超微針刀是一種極精細的針刀技術，針具直徑極小，可精確切割、鬆解筋膜沾黏點，對於慢性疼痛、筋膜炎、網球肘、媽媽手等問題效果卓著。相較於傳統推拿，超微針刀可直接作用於深層沾黏組織；相較於手術，則無需切口，恢復快速。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "小兒轉骨幾歲開始評估比較合適？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "孩子青春期的初期是身高成長最快的「快速生長期」：男生約 12 至 16 歲，女生約 10 至 14 歲。判斷關鍵不在實際年齡而是骨齡，建議在生長板（骨骺線）閉合前及早評估。森美中醫以超音波追蹤骨齡與生長板，李醫師會依孩子的發育狀況制訂個人化的中藥（水藥／藥粉／藥錠）與無痛雷射針灸調理方案，把握黃金生長期。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "外泌體養髮療程適合哪些人？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "外泌體養髮適合有落髮困擾（雄性禿、圓禿、壓力性落髮）、頭皮健康問題，或希望預防性養護頭髮品質的人士。療程結合外泌體生物科技（細胞間傳訊因子）與中醫頭皮經絡調理，從底層促進毛囊再生，相較傳統生髮療程更溫和且效果持久。"
+          }
+        }
+      ]
     }
   ]
 }
@@ -592,6 +685,16 @@ section { padding: 6rem 0; }
   color: var(--green); border: 1px solid rgba(64,114,72,0.3);
   padding: 0.25rem 0.6rem; border-radius: 3px;
 }
+
+.treatment-link {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  margin-top: 1rem; margin-left: 0.6rem;
+  font-size: 0.85rem; font-weight: 600;
+  color: var(--green); letter-spacing: 0.05em;
+  transition: gap 0.2s;
+}
+
+.treatment-link:hover { gap: 0.55rem; color: var(--green-dark); }
 
 /* ENVIRONMENT */
 .environment { background: var(--white); }
@@ -1283,7 +1386,7 @@ footer {
               <div class="contact-label">LINE 官方帳號</div>
               <div class="contact-value">
                 <a href="https://line.me/R/ti/p/@068ohdvi" target="_blank" rel="noopener" style="color:var(--green);display:inline-flex;align-items:center;gap:0.4rem;" onclick="gtag('event','click_line',{'event_category':'contact','event_label':'LINE官方帳號'});">
-                  @068ohdvi · 點此加入諮詢
+                  @068ohdvi · 點此加入官方 LINE
                 </a>
               </div>
             </div>
@@ -1346,6 +1449,7 @@ footer {
         <h3 class="treatment-name">中醫減重</h3>
         <p class="treatment-desc">體組成分析儀精確評估，針灸代謝穴位＋埋線＋中藥三管齊下，健康、持久地達成理想體態。</p>
         <span class="treatment-tag">中醫減重</span>
+        <a class="treatment-link" href="/treatments/weight-loss" aria-label="深入了解中醫減重">深入了解 →</a>
       </article>
 
       <article class="treatment-card" role="listitem">
@@ -1353,6 +1457,15 @@ footer {
         <h3 class="treatment-name">超微針刀</h3>
         <p class="treatment-desc">精細鬆解筋膜沾黏，有效改善慢性疼痛、肩頸僵硬、腰背痠痛，最小創傷、最大療效。</p>
         <span class="treatment-tag">超微針刀</span>
+        <a class="treatment-link" href="/treatments/acupotomy" aria-label="深入了解超微針刀">深入了解 →</a>
+      </article>
+
+      <article class="treatment-card" role="listitem">
+        <span class="treatment-icon" aria-hidden="true">🪶</span>
+        <h3 class="treatment-name">浮針療法</h3>
+        <p class="treatment-desc">專利管針沿皮下淺筋膜層水平掃散，處理牽動痛點的「筋膜張力源」，痛感低、幾乎無修復期，怕針也能放鬆接受。</p>
+        <span class="treatment-tag">浮針</span>
+        <a class="treatment-link" href="/treatments/fu-needling" aria-label="深入了解浮針療法">深入了解 →</a>
       </article>
 
       <article class="treatment-card" role="listitem">
@@ -1360,6 +1473,7 @@ footer {
         <h3 class="treatment-name">針灸療程</h3>
         <p class="treatment-desc">傳統針灸結合現代精準取穴，適用疼痛管理、自律神經調節、免疫功能強化等多元需求。</p>
         <span class="treatment-tag">針灸</span>
+        <a class="treatment-link" href="/treatments/acupuncture" aria-label="深入了解針灸療程">深入了解 →</a>
       </article>
 
       <article class="treatment-card" role="listitem">
@@ -1367,6 +1481,7 @@ footer {
         <h3 class="treatment-name">美顏針</h3>
         <p class="treatment-desc">以臉部經絡為基礎，刺激膠原蛋白增生，自然提升輪廓、淡化細紋，無侵入性的回春療程。</p>
         <span class="treatment-tag">美顏針</span>
+        <a class="treatment-link" href="/treatments/facial-acupuncture" aria-label="深入了解美顏針">深入了解 →</a>
       </article>
 
       <article class="treatment-card" role="listitem">
@@ -1374,6 +1489,7 @@ footer {
         <h3 class="treatment-name">埋線療程</h3>
         <p class="treatment-desc">可吸收醫療線材植入穴位，持續刺激穴道，效果可維持數週，適合忙碌族群的長效調理選擇。</p>
         <span class="treatment-tag">埋線</span>
+        <a class="treatment-link" href="/treatments/embedding" aria-label="深入了解埋線療程">深入了解 →</a>
       </article>
 
       <article class="treatment-card" role="listitem">
@@ -1381,6 +1497,7 @@ footer {
         <h3 class="treatment-name">婦科調理</h3>
         <p class="treatment-desc">月經失調、不孕調理、更年期症狀、PCOS等，以中藥與針灸溫和調整女性荷爾蒙平衡。</p>
         <span class="treatment-tag">婦科調理</span>
+        <a class="treatment-link" href="/treatments/gynecology" aria-label="深入了解婦科調理">深入了解 →</a>
       </article>
 
       <article class="treatment-card" role="listitem">
@@ -1388,6 +1505,7 @@ footer {
         <h3 class="treatment-name">外泌體養髮</h3>
         <p class="treatment-desc">結合外泌體生物技術與中醫頭皮經絡調理，從根源改善落髮問題，促進毛囊再生與頭髮健康。</p>
         <span class="treatment-tag">外泌體養髮</span>
+        <a class="treatment-link" href="/treatments/exosome-hair" aria-label="深入了解外泌體養髮">深入了解 →</a>
       </article>
 
       <article class="treatment-card" role="listitem">
@@ -1395,6 +1513,15 @@ footer {
         <h3 class="treatment-name">小兒轉骨</h3>
         <p class="treatment-desc">青春期發育關鍵期的中醫調養，以補腎健脾中藥配合針灸，協助孩子在黃金期充分發展身高潛力。</p>
         <span class="treatment-tag">小兒轉骨</span>
+        <a class="treatment-link" href="/treatments/pediatric-growth" aria-label="深入了解小兒轉骨">深入了解 →</a>
+      </article>
+
+      <article class="treatment-card" role="listitem">
+        <span class="treatment-icon" aria-hidden="true">🩹</span>
+        <h3 class="treatment-name">三伏貼・三九貼</h3>
+        <p class="treatment-desc">依「冬病夏治」原理，於三伏與三九時節以辛溫藥材敷貼穴位，調節免疫、改善過敏體質，大人小孩皆適用。</p>
+        <span class="treatment-tag">穴位敷貼</span>
+        <a class="treatment-link" href="/treatments/sanfu-sanjiu" aria-label="深入了解三伏貼三九貼">深入了解 →</a>
       </article>
 
     </div>
@@ -1730,11 +1857,11 @@ footer {
 
       <div class="faq-item" role="listitem">
         <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
-          小兒轉骨幾歲開始做最適合？
+          小兒轉骨幾歲開始評估比較合適？
           <span class="faq-toggle" aria-expanded="false">+</span>
         </div>
         <div class="faq-answer">
-          轉骨調理最佳時機通常為青春期前後：女孩約8-13歲，男孩約10-15歲。建議在骨骺線尚未閉合前開始調理，效果最為顯著。李醫師會依據孩子的發育狀況、骨齡評估制訂個人化的中藥及針灸調理方案，幫助孩子在黃金生長期充分發揮身高潛力。
+          孩子青春期的初期是身高成長最快的「快速生長期」：男生約 12 至 16 歲，女生約 10 至 14 歲。判斷關鍵不在實際年齡而是骨齡，建議在生長板（骨骺線）閉合前及早評估。森美中醫以超音波追蹤骨齡與生長板，李醫師會依孩子的發育狀況制訂個人化的中藥（水藥／藥粉／藥錠）與無痛雷射針灸調理方案，把握黃金生長期。
         </div>
       </div>
 

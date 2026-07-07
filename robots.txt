@@ -27,4 +27,5 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
+Sitemap: https://www.sunmay266.com/sitemap_index.xml
 Sitemap: https://www.sunmay266.com/sitemap.xml

@@ -5,17 +5,51 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 
-# AI 爬蟲
+# AI 爬蟲 — OpenAI
 User-agent: GPTBot
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# AI 爬蟲 — Google（Gemini 授權開關，實際由 Googlebot 爬取）
 User-agent: Google-Extended
 Allow: /
 
+# AI 爬蟲 — Anthropic
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# AI 爬蟲 — Meta
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# AI 爬蟲 — 其他
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Applebot
 Allow: /
 
 User-agent: Applebot-Extended
@@ -24,8 +58,14 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
-User-agent: anthropic-ai
+User-agent: Amazonbot
 Allow: /
 
-Sitemap: https://www.sunmay266.com/sitemap_index.xml
+User-agent: Bytespider
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
 Sitemap: https://www.sunmay266.com/sitemap.xml
+Sitemap: https://www.sunmay266.com/sitemap_index.xml

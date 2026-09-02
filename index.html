@@ -1228,6 +1228,11 @@ section { padding: 6rem 0; }
   border-radius: 50%; background: var(--green);
 }
 
+.s-dot-dong {
+  display: inline-block; width: 8px; height: 8px;
+  border-radius: 50%; background: #8B5A2B;
+}
+
 .contact-info { margin-top: 2rem; }
 
 .contact-item {
@@ -1782,9 +1787,12 @@ footer {
         <p class="section-eyebrow">HOURS & CONTACT</p>
         <h2 class="section-title" id="schedule-title">診療<strong>時間</strong></h2>
 
-        <p style="font-size:0.82rem;color:var(--sand);letter-spacing:0.05em;margin-top:1rem;margin-bottom:-0.5rem;">目前門診時間（2026/9/7 前）</p>
+        <div style="display:flex;gap:1.5rem;margin:1.25rem 0 0.75rem;font-size:0.85rem;color:var(--text-mid);">
+          <span><span class="s-dot"></span> 李俊儀 院長</span>
+          <span><span class="s-dot-dong"></span> 董芯羽 醫師</span>
+        </div>
 
-        <table class="hours-table" aria-label="森美中醫診所目前門診時間表">
+        <table class="hours-table" aria-label="森美中醫診所門診時間表">
           <thead>
             <tr>
               <th></th>
@@ -1801,24 +1809,24 @@ footer {
               <td>10:00 – 13:30</td>
               <td><span class="s-dot"></span></td>
               <td></td>
-              <td></td>
-              <td><span class="s-dot"></span></td>
+              <td><span class="s-dot-dong"></span></td>
+              <td><span class="s-dot-dong"></span></td>
               <td></td>
               <td><span class="s-dot"></span><br><small style="font-size:0.72em;color:var(--text-muted);">9:30–13:00</small></td>
             </tr>
             <tr>
               <td>14:00 – 17:30</td>
               <td><span class="s-dot"></span></td>
+              <td><span class="s-dot-dong"></span></td>
+              <td><span class="s-dot-dong"></span></td>
               <td><span class="s-dot"></span></td>
-              <td></td>
               <td><span class="s-dot"></span></td>
-              <td><span class="s-dot"></span></td>
-              <td></td>
+              <td><span class="s-dot-dong"></span><br><small style="font-size:0.72em;color:var(--text-muted);">13:00–17:00</small></td>
             </tr>
             <tr>
               <td>18:00 – 21:00</td>
               <td><span class="s-dot"></span></td>
-              <td><span class="s-dot"></span></td>
+              <td><span class="s-dot-dong"></span></td>
               <td></td>
               <td><span class="s-dot"></span></td>
               <td><span class="s-dot"></span></td>
@@ -1827,64 +1835,8 @@ footer {
           </tbody>
         </table>
         <p style="margin-top:0.75rem;font-size:0.82rem;color:var(--text-muted);line-height:1.6;">
-          每診結束前 15 分鐘止掛，會依現場狀況調整｜周三、周日固定休診
+          每診結束前 15 分鐘止掛，會依現場狀況調整｜周日固定休診
         </p>
-
-        <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px dashed rgba(173,162,141,0.35);">
-          <p style="font-size:0.78rem;color:var(--sand);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.4rem;">2026/9/8 起 診次調整</p>
-          <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:1rem;">董芯羽中醫師加入後，門診時間調整如下：</p>
-
-          <div style="display:flex;gap:1.5rem;margin-bottom:0.5rem;font-size:0.85rem;color:var(--text-mid);">
-            <span>🍃 李俊儀 院長</span>
-            <span>🌰 董芯羽 醫師</span>
-          </div>
-
-          <table class="hours-table" aria-label="森美中醫診所 2026年9月8日起門診時間表">
-            <thead>
-              <tr>
-                <th></th>
-                <th>一</th>
-                <th>二</th>
-                <th>三</th>
-                <th>四</th>
-                <th>五</th>
-                <th>六</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>10:00 – 13:30</td>
-                <td>🍃</td>
-                <td></td>
-                <td>🌰</td>
-                <td>🌰</td>
-                <td></td>
-                <td>🍃<br><small style="font-size:0.72em;color:var(--text-muted);">9:30–13:00</small></td>
-              </tr>
-              <tr>
-                <td>14:00 – 17:30</td>
-                <td>🍃</td>
-                <td>🌰</td>
-                <td>🌰</td>
-                <td>🍃</td>
-                <td>🍃</td>
-                <td>🌰<br><small style="font-size:0.72em;color:var(--text-muted);">13:00–17:00</small></td>
-              </tr>
-              <tr>
-                <td>18:00 – 21:00</td>
-                <td>🍃</td>
-                <td>🌰</td>
-                <td></td>
-                <td>🍃</td>
-                <td>🍃</td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-          <p style="margin-top:0.75rem;font-size:0.82rem;color:var(--text-muted);line-height:1.6;">
-            每診結束前 15 分鐘止掛，會依現場狀況調整｜周日固定休診
-          </p>
-        </div>
 
         <div class="contact-info" role="complementary" aria-label="聯絡資訊">
           <div class="contact-item">

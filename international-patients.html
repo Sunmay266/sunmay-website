@@ -120,7 +120,7 @@
           "name": "What are Dr. Tung's clinic hours?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Dr. Tung sees patients: Tuesday 14:00-21:00, Wednesday 10:00-17:30, Thursday 10:00-13:30, and Saturday 13:30-17:00 (Taipei time). Check-in closes 15 minutes before each session ends, and hours may be adjusted, so we recommend booking in advance via LINE to confirm availability for your travel dates."
+            "text": "Dr. Tung sees patients: Tuesday 14:00-17:30 and 18:00-21:00 (with a break in between), Wednesday 10:00-13:30 and 14:00-17:30 (with a break in between), Thursday 10:00-13:30, and Saturday 13:30-17:00 (Taipei time). Check-in closes 15 minutes before each session ends, and hours may be adjusted, so we recommend booking in advance via LINE to confirm availability for your travel dates."
           }
         },
         {
@@ -136,7 +136,7 @@
           "name": "How do I book an appointment as an international patient?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The easiest way is to message our LINE official account (@068ohdvi) with your preferred dates, the treatment you're interested in, and any insurance documentation needs. You can also call +886-2-2701-0768."
+            "text": "The easiest way is to message our LINE official account (@068ohdvi) with your preferred dates, the treatment you're interested in, and any insurance documentation needs. You can also email us at sunmay266@gmail.com or call +886-2-2701-0768."
           }
         },
         {
@@ -247,10 +247,12 @@ h2 { font-size: 1.4rem; font-weight: 600; color: var(--green-dark); margin-botto
 .faq-item p { padding: 0 1.25rem 1.1rem; color: var(--text-mid); font-size: 0.95rem; }
 
 .faq-hours { padding: 0 1.25rem 1.1rem; }
-.hours-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 0.6rem; }
-.hours-row { background: var(--cream-light); border: 1px solid rgba(64,114,72,0.15); border-radius: 10px; padding: 0.7rem 0.5rem; text-align: center; }
-.hours-day { display: block; font-size: 0.78rem; font-weight: 700; color: var(--green-dark); letter-spacing: 0.1em; text-transform: uppercase; }
-.hours-time { display: block; font-size: 1rem; color: var(--text-dark); margin-top: 0.3rem; font-weight: 600; }
+.hours-grid { display: flex; flex-direction: column; gap: 0.5rem; }
+.hours-row { display: flex; align-items: center; flex-wrap: wrap; gap: 0.6rem; background: var(--cream-light); border: 1px solid rgba(64,114,72,0.15); border-radius: 10px; padding: 0.6rem 0.9rem; }
+.hours-day { flex: none; width: 68px; font-size: 0.78rem; font-weight: 700; color: var(--green-dark); letter-spacing: 0.1em; text-transform: uppercase; }
+.hours-times { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+.hours-time { font-size: 0.92rem; color: var(--text-dark); font-weight: 600; background: #fff; border: 1px solid rgba(64,114,72,0.18); border-radius: 6px; padding: 0.25rem 0.65rem; }
+.hours-break { font-size: 0.72rem; color: var(--text-muted); font-style: italic; }
 .hours-note { margin-top: 0.75rem; font-size: 0.82rem; color: var(--text-muted); }
 
 .disclaimer { font-size: 0.8rem; color: var(--text-muted); max-width: 48em; margin-top: 0.75rem; }
@@ -414,12 +416,32 @@ footer a { color: var(--cream); }
       <summary>What are Dr. Tung's clinic hours?</summary>
       <div class="faq-hours">
         <div class="hours-grid">
-          <div class="hours-row"><span class="hours-day">Tue</span><span class="hours-time">14:00–21:00</span></div>
-          <div class="hours-row"><span class="hours-day">Wed</span><span class="hours-time">10:00–17:30</span></div>
-          <div class="hours-row"><span class="hours-day">Thu</span><span class="hours-time">10:00–13:30</span></div>
-          <div class="hours-row"><span class="hours-day">Sat</span><span class="hours-time">13:30–17:00</span></div>
+          <div class="hours-row">
+            <span class="hours-day">Tue</span>
+            <span class="hours-times">
+              <span class="hours-time">14:00–17:30</span>
+              <span class="hours-break">break</span>
+              <span class="hours-time">18:00–21:00</span>
+            </span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Wed</span>
+            <span class="hours-times">
+              <span class="hours-time">10:00–13:30</span>
+              <span class="hours-break">break</span>
+              <span class="hours-time">14:00–17:30</span>
+            </span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Thu</span>
+            <span class="hours-times"><span class="hours-time">10:00–13:30</span></span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Sat</span>
+            <span class="hours-times"><span class="hours-time">13:30–17:00</span></span>
+          </div>
         </div>
-        <p class="hours-note">Taipei time · Check-in closes 15 min before each session ends · Hours may be adjusted — confirm via LINE before planning your visit.</p>
+        <p class="hours-note">Taipei time · There's a short break between morning/afternoon and afternoon/evening sessions · Check-in closes 15 min before each session ends · Hours may be adjusted — confirm via LINE before planning your visit.</p>
       </div>
     </details>
     <details class="faq-item">
@@ -428,7 +450,7 @@ footer a { color: var(--cream); }
     </details>
     <details class="faq-item">
       <summary>How do I book an appointment as an international patient?</summary>
-      <p>The easiest way is to message our LINE official account (@068ohdvi) with your preferred dates, the treatment you're interested in, and any insurance documentation needs. You can also call +886-2-2701-0768.</p>
+      <p>The easiest way is to message our LINE official account (@068ohdvi) with your preferred dates, the treatment you're interested in, and any insurance documentation needs. You can also email us at <a href="mailto:sunmay266@gmail.com" style="color:var(--green);font-weight:600;">sunmay266@gmail.com</a> or call +886-2-2701-0768.</p>
     </details>
     <details class="faq-item">
       <summary>What payment methods do you accept?</summary>

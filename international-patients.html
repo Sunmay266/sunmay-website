@@ -112,7 +112,7 @@
           "name": "Do the doctors speak English?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "English consultations are available with our English-speaking TCM doctor, Dr. Tung. For appointments with our other physician, we recommend bringing a translator or using a translation app to ensure clear communication."
+            "text": "English consultations are available with our English-speaking TCM doctor, Dr. Tung."
           }
         },
         {
@@ -144,7 +144,7 @@
           "name": "What payment methods do you accept?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We accept cash (NTD) and major credit cards for self-pay treatments. Please note that insurance reimbursement is processed by your own insurance provider after your visit, not directly by our clinic."
+            "text": "We accept cash (NTD) and bank transfer to a Taiwan bank account for self-pay treatments. We do not accept credit cards. Please note that insurance reimbursement is processed by your own insurance provider after your visit, not directly by our clinic."
           }
         }
       ]
@@ -205,8 +205,8 @@ h2 { font-size: 1.4rem; font-weight: 600; color: var(--green-dark); margin-botto
 
 .mini-cta { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; background: var(--cream-light); border: 1px solid rgba(64,114,72,0.15); border-radius: 12px; padding: 1.25rem 1.6rem; margin-top: 1.5rem; }
 .mini-cta p { color: var(--text-mid); font-size: 0.95rem; margin: 0; max-width: 32em; }
-.line-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #06C755; color: #fff; padding: 0.7rem 1.4rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem; white-space: nowrap; flex: none; }
-.line-btn:hover { background: #05a648; color: #fff; }
+.line-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--green); color: #fff; padding: 0.7rem 1.4rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem; white-space: nowrap; flex: none; }
+.line-btn:hover { background: var(--green-dark); color: #fff; }
 
 .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
 .feature { background: #fff; border: 1px solid rgba(64,114,72,0.15); border-radius: 12px; padding: 1.5rem 1.6rem; }
@@ -245,6 +245,13 @@ h2 { font-size: 1.4rem; font-weight: 600; color: var(--green-dark); margin-botto
 .faq-item summary::after { content: "+"; position: absolute; right: 1.25rem; top: 50%; transform: translateY(-50%); color: var(--green); font-size: 1.2rem; }
 .faq-item[open] summary::after { content: "−"; }
 .faq-item p { padding: 0 1.25rem 1.1rem; color: var(--text-mid); font-size: 0.95rem; }
+
+.faq-hours { padding: 0 1.25rem 1.1rem; }
+.hours-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 0.6rem; }
+.hours-row { background: var(--cream-light); border: 1px solid rgba(64,114,72,0.15); border-radius: 10px; padding: 0.7rem 0.5rem; text-align: center; }
+.hours-day { display: block; font-size: 0.78rem; font-weight: 700; color: var(--green-dark); letter-spacing: 0.1em; text-transform: uppercase; }
+.hours-time { display: block; font-size: 1rem; color: var(--text-dark); margin-top: 0.3rem; font-weight: 600; }
+.hours-note { margin-top: 0.75rem; font-size: 0.82rem; color: var(--text-muted); }
 
 .disclaimer { font-size: 0.8rem; color: var(--text-muted); max-width: 48em; margin-top: 0.75rem; }
 
@@ -297,7 +304,7 @@ footer a { color: var(--cream); }
     <div class="features">
       <div class="feature">
         <h3>English consultations with Dr. Tung</h3>
-        <p>English consultations are available with our English-speaking TCM doctor, Dr. Tung. For appointments with our other physician, we recommend bringing a translator or using a translation app.</p>
+        <p>English consultations are available with our English-speaking TCM doctor, Dr. Tung.</p>
       </div>
       <div class="feature">
         <h3>Insurance documentation support</h3>
@@ -401,11 +408,19 @@ footer a { color: var(--cream); }
     </details>
     <details class="faq-item">
       <summary>Do the doctors speak English?</summary>
-      <p>English consultations are available with our English-speaking TCM doctor, Dr. Tung. For appointments with our other physician, we recommend bringing a translator or using a translation app to ensure clear communication.</p>
+      <p>English consultations are available with our English-speaking TCM doctor, Dr. Tung.</p>
     </details>
     <details class="faq-item">
       <summary>What are Dr. Tung's clinic hours?</summary>
-      <p>Dr. Tung sees patients: Tuesday 14:00–21:00, Wednesday 10:00–17:30, Thursday 10:00–13:30, and Saturday 13:30–17:00 (Taipei time). Check-in closes 15 minutes before each session ends, and hours may be adjusted — we recommend booking in advance via LINE to confirm availability for your travel dates.</p>
+      <div class="faq-hours">
+        <div class="hours-grid">
+          <div class="hours-row"><span class="hours-day">Tue</span><span class="hours-time">14:00–21:00</span></div>
+          <div class="hours-row"><span class="hours-day">Wed</span><span class="hours-time">10:00–17:30</span></div>
+          <div class="hours-row"><span class="hours-day">Thu</span><span class="hours-time">10:00–13:30</span></div>
+          <div class="hours-row"><span class="hours-day">Sat</span><span class="hours-time">13:30–17:00</span></div>
+        </div>
+        <p class="hours-note">Taipei time · Check-in closes 15 min before each session ends · Hours may be adjusted — confirm via LINE before planning your visit.</p>
+      </div>
     </details>
     <details class="faq-item">
       <summary>Can I complete a treatment course during a short trip to Taipei?</summary>
@@ -417,7 +432,7 @@ footer a { color: var(--cream); }
     </details>
     <details class="faq-item">
       <summary>What payment methods do you accept?</summary>
-      <p>We accept cash (NTD) and major credit cards for self-pay treatments. Please note that insurance reimbursement is processed by your own insurance provider after your visit, not directly by our clinic.</p>
+      <p>We accept cash (NTD) and bank transfer to a Taiwan bank account for self-pay treatments. We do not accept credit cards. Please note that insurance reimbursement is processed by your own insurance provider after your visit, not directly by our clinic.</p>
     </details>
     <p class="disclaimer">※ Treatment outcomes vary by individual condition. This page is for general information and does not replace professional medical diagnosis.</p>
   </section>

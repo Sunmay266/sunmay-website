@@ -279,8 +279,8 @@ h2 { font-family: var(--display); font-size: 1.65rem; font-weight: 700; color: v
 .cta-buttons { display: flex; gap: 0.9rem; justify-content: center; flex-wrap: wrap; }
 .cta-buttons a { padding: 0.8rem 1.6rem; border-radius: 8px; font-weight: 600; font-size: 0.95rem; }
 .cta-line { background: var(--cream); color: var(--green-dark); }
-.cta-tel { background: rgba(232,224,212,0.15); color: var(--cream); border: 1px solid rgba(232,224,212,0.4); display: inline-flex; align-items: center; gap: 0.5rem; }
-.cta-tel svg { flex: none; width: 1em; height: 1em; }
+.cta-tel, .cta-email { background: rgba(232,224,212,0.15); color: var(--cream); border: 1px solid rgba(232,224,212,0.4); display: inline-flex; align-items: center; gap: 0.5rem; }
+.cta-tel svg, .cta-email svg { flex: none; width: 1em; height: 1em; }
 
 footer { margin-top: 2.5rem; padding: 2rem 1.5rem; background: var(--green-dark); color: rgba(232,224,212,0.75); font-size: 0.85rem; text-align: center; line-height: 2; }
 footer a { color: var(--cream); }
@@ -410,7 +410,7 @@ footer a { color: var(--cream); }
       <div class="treatment-card">
         <h3>Internal Medicine &amp; Wellness Care</h3>
         <p class="zh-name">內科調理・婦科調理</p>
-        <p>One of Dr. Tung's specialty areas — whole-body conditioning for insomnia, eczema, fatigue, recurring colds, excess internal heat ("heatiness"), and menstrual/gynecological regulation, using personalized herbal medicine and acupuncture.</p>
+        <p>Personalized herbal medicine and acupuncture to address whole-body imbalances — including insomnia, eczema, fatigue, recurring colds, excess internal heat ("heatiness"), and menstrual/gynecological regulation.</p>
         <a class="more-link" href="/treatments/gynecology">View gynecology treatment details (Chinese) →</a>
       </div>
     </div>
@@ -502,6 +502,7 @@ footer a { color: var(--cream); }
     <div class="cta-buttons">
       <a href="https://line.me/R/ti/p/@068ohdvi" target="_blank" rel="noopener" class="cta-line" onclick="gtag('event','click_line',{'event_category':'contact','event_label':'LINE-international-CTA'});">Message us on LINE</a>
       <a href="tel:+886227010768" class="cta-tel"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/></svg> +886-2-2701-0768</a>
+      <a href="mailto:sunmay266@gmail.com" class="cta-email" onclick="gtag('event','click_email',{'event_category':'contact','event_label':'Email-international-CTA'});"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg> sunmay266@gmail.com</a>
     </div>
   </section>
 

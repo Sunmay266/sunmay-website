@@ -207,7 +207,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(250,250,247,0.95)
 .hero { max-width: 1080px; margin: 0 auto; padding: 2.5rem 1.5rem 1rem; }
 .hero-grid { display: flex; gap: 2.5rem; align-items: flex-start; flex-wrap: wrap; }
 .hero-text { flex: 1 1 420px; min-width: 280px; }
-.hero-photo { flex: none; width: 300px; margin-top: 4.5rem; }
+.hero-photo { flex: none; width: 300px; margin-top: 9rem; }
 .hero-photo img { width: 100%; height: 400px; object-fit: cover; border-radius: 12px; display: block; }
 @media (max-width: 760px) { .hero-photo { width: 100%; } .hero-photo img { height: 280px; } }
 .eyebrow { font-family: var(--display); font-size: 0.9rem; letter-spacing: 0.3em; color: var(--sand); text-transform: uppercase; margin-bottom: 0.75rem; }
@@ -293,8 +293,15 @@ h2 { font-family: var(--display); font-size: 1.65rem; font-weight: 700; color: v
 .cta-buttons { display: flex; gap: 0.9rem; justify-content: center; flex-wrap: wrap; }
 .cta-buttons a { padding: 0.8rem 1.6rem; border-radius: 8px; font-weight: 600; font-size: 0.95rem; }
 .cta-line { background: var(--cream); color: var(--green-dark); }
-.cta-tel, .cta-email { background: rgba(232,224,212,0.15); color: var(--cream); border: 1px solid rgba(232,224,212,0.4); display: inline-flex; align-items: center; gap: 0.5rem; }
+.cta-tel { background: rgba(232,224,212,0.15); color: var(--cream); border: 1px solid rgba(232,224,212,0.4); display: inline-flex; align-items: center; gap: 0.5rem; }
+.cta-email { background: var(--cream); color: var(--green-dark); display: inline-flex; align-items: center; gap: 0.5rem; }
 .cta-tel svg, .cta-email svg { flex: none; width: 1em; height: 1em; }
+
+.find-us { max-width: 1080px; margin: 2.5rem auto 0; padding: 0 1.5rem; text-align: center; }
+.find-us p { color: var(--text-mid); max-width: 42em; margin: 0 auto 0.9rem; }
+.map-link { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--green); }
+.map-link:hover { color: var(--green-dark); }
+.map-link svg { width: 1.1em; height: 1.1em; flex: none; }
 
 footer { margin-top: 2.5rem; padding: 2rem 1.5rem; background: var(--green-dark); color: rgba(232,224,212,0.75); font-size: 0.85rem; text-align: center; line-height: 2; }
 footer a { color: var(--cream); }
@@ -551,7 +558,6 @@ footer a { color: var(--cream); }
 
   <section class="cta" aria-label="Booking information">
     <h2>Book Your Visit</h2>
-    <p>No. 20, Alley 15, Lane 266, Sec. 4, Renai Rd., Da'an Dist., Taipei City 106, Taiwan (behind Cathay General Hospital)</p>
     <div class="cta-buttons">
       <a href="https://line.me/R/ti/p/@068ohdvi" target="_blank" rel="noopener" class="cta-line" onclick="gtag('event','click_line',{'event_category':'contact','event_label':'LINE-international-CTA'});">Message us on LINE</a>
       <a href="tel:+886227010768" class="cta-tel"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/></svg> +886-2-2701-0768</a>
@@ -559,12 +565,20 @@ footer a { color: var(--cream); }
     </div>
   </section>
 
+  <div class="find-us">
+    <p>No. 20, Alley 15, Lane 266, Sec. 4, Renai Rd., Da'an Dist., Taipei City 106, Taiwan (behind Cathay General Hospital)</p>
+    <a href="https://maps.app.goo.gl/VXsT5TSHx28kFdf76" target="_blank" rel="noopener" class="map-link" onclick="gtag('event','click_map',{'event_category':'contact','event_label':'GoogleMaps-international'});">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      View on Google Maps →
+    </a>
+  </div>
+
 </main>
 
 <footer>
   <img src="/images/img_png_02.png" alt="Sunmay TCM Clinic Logo" style="height:36px;width:auto;margin:0 auto 0.75rem;filter:brightness(0) invert(1) sepia(1) saturate(0.4) hue-rotate(90deg) brightness(1.5);">
   <div>Sunmay TCM Clinic 森美中醫診所</div>
-  <div>No. 20, Alley 15, Lane 266, Sec. 4, Renai Rd., Da'an Dist., Taipei City 106, Taiwan｜<a href="tel:+886227010768">+886-2-2701-0768</a></div>
+  <div><a href="https://maps.app.goo.gl/VXsT5TSHx28kFdf76" target="_blank" rel="noopener">No. 20, Alley 15, Lane 266, Sec. 4, Renai Rd., Da'an Dist., Taipei City 106, Taiwan</a>｜<a href="tel:+886227010768">+886-2-2701-0768</a></div>
   <div><a href="/">中文首頁 Chinese homepage</a>｜<a href="/#treatments">All treatments</a></div>
 </footer>
 

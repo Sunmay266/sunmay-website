@@ -205,6 +205,11 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(250,250,247,0.95)
 .breadcrumbs span { margin: 0 0.4rem; }
 
 .hero { max-width: 1080px; margin: 0 auto; padding: 2.5rem 1.5rem 1rem; }
+.hero-grid { display: flex; gap: 2.5rem; align-items: flex-start; flex-wrap: wrap; }
+.hero-text { flex: 1 1 420px; min-width: 280px; }
+.hero-photo { flex: none; width: 300px; }
+.hero-photo img { width: 100%; height: 400px; object-fit: cover; border-radius: 12px; display: block; }
+@media (max-width: 760px) { .hero-photo { width: 100%; } .hero-photo img { height: 280px; } }
 .eyebrow { font-family: var(--display); font-size: 0.9rem; letter-spacing: 0.3em; color: var(--sand); text-transform: uppercase; margin-bottom: 0.75rem; }
 h1 { font-family: var(--display); font-size: clamp(2.1rem, 5.2vw, 3.1rem); font-weight: 700; color: var(--text-dark); line-height: 1.3; letter-spacing: 0.01em; }
 h1 strong { color: var(--green); font-weight: 700; }
@@ -213,6 +218,7 @@ h1 strong { color: var(--green); font-weight: 700; }
 .container { max-width: 1080px; margin: 0 auto; padding: 0 1.5rem; }
 section { padding: 2.25rem 0; }
 h2 { font-family: var(--display); font-size: 1.65rem; font-weight: 700; color: var(--green-dark); margin-bottom: 1.25rem; padding-left: 0.9rem; border-left: 4px solid var(--green); line-height: 1.4; letter-spacing: 0.01em; }
+.intro { margin-top: 1.25rem; }
 .intro p + p { margin-top: 1rem; }
 .intro p { max-width: 48em; color: var(--text-mid); }
 
@@ -242,9 +248,6 @@ h2 { font-family: var(--display); font-size: 1.65rem; font-weight: 700; color: v
 .doctor-creds { list-style: none; margin-top: 1.1rem; max-width: 42em; }
 .doctor-creds li { padding-left: 1.4em; position: relative; color: var(--text-mid); font-size: 0.92rem; margin-top: 0.4rem; }
 .doctor-creds li::before { content: "✓"; position: absolute; left: 0; color: var(--green); font-weight: 700; }
-
-.space-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
-.space-gallery img { width: 100%; height: 220px; object-fit: cover; border-radius: 12px; display: block; }
 
 .treatment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
 .treatment-card { background: #fff; border: 1px solid rgba(64,114,72,0.15); border-radius: 12px; padding: 1.5rem 1.6rem; display: flex; flex-direction: column; }
@@ -315,17 +318,23 @@ footer a { color: var(--cream); }
 </div>
 
 <header class="hero">
-  <p class="eyebrow">INTERNATIONAL PATIENTS</p>
-  <h1>Welcome to <strong>Sunmay TCM Clinic</strong>, Taipei</h1>
-  <p class="tagline">Sunmay is an English-friendly TCM and acupuncture clinic in Taipei. We welcome international patients, expats, and travelers who are interested in experiencing Traditional Chinese Medicine in Taiwan.</p>
+  <div class="hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">INTERNATIONAL PATIENTS</p>
+      <h1>Welcome to <strong>Sunmay TCM Clinic</strong>, Taipei</h1>
+      <p class="tagline">Sunmay is an English-friendly TCM and acupuncture clinic in Taipei. We welcome international patients, expats, and travelers who are interested in experiencing Traditional Chinese Medicine in Taiwan.</p>
+      <div class="intro">
+        <p>Sunmay TCM Clinic is located in Taipei's Da'an District, right behind Cathay General Hospital and a short walk from Xinyi Anhe MRT Station. Our services include acupuncture and pain management — for neck and shoulder tension, back pain, muscle tightness, and sports-related discomfort — as well as facial acupuncture and wellness care.</p>
+        <p>Whether you're visiting Taipei for a short trip or living and working here as an expat, Sunmay is a welcoming place to experience Traditional Chinese Medicine. Many of our treatments are designed to show visible, meaningful results in just a few sessions, and we're happy to plan a schedule around your travel dates — or, if you're based in Taipei, around ongoing care that fits your routine.</p>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="/images/img_jpeg_10.jpg" alt="Sunmay TCM Clinic reception counter with curved wood design and greenery" loading="lazy">
+    </div>
+  </div>
 </header>
 
 <main class="container">
-
-  <section class="intro" aria-label="Introduction">
-    <p>Sunmay TCM Clinic is located in Taipei's Da'an District, right behind Cathay General Hospital and a short walk from Xinyi Anhe MRT Station. Our services include acupuncture and pain management — for neck and shoulder tension, back pain, muscle tightness, and sports-related discomfort — as well as facial acupuncture and wellness care.</p>
-    <p>Whether you're visiting Taipei for a short trip or living and working here as an expat, Sunmay is a welcoming place to experience Traditional Chinese Medicine. Many of our treatments are designed to show visible, meaningful results in just a few sessions, and we're happy to plan a schedule around your travel dates — or, if you're based in Taipei, around ongoing care that fits your routine.</p>
-  </section>
 
   <section aria-labelledby="why-title">
     <h2 id="why-title">Why International Patients Choose Us</h2>
@@ -359,15 +368,6 @@ footer a { color: var(--cream); }
     <div class="mini-cta">
       <p>Ready to check availability for your travel dates? Message us directly on LINE.</p>
       <a href="https://line.me/R/ti/p/@068ohdvi" target="_blank" rel="noopener" class="line-btn" onclick="gtag('event','click_line',{'event_category':'contact','event_label':'LINE-international-why'});"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> Add us on LINE</a>
-    </div>
-  </section>
-
-  <section aria-labelledby="space-title">
-    <h2 id="space-title">Our Space</h2>
-    <div class="space-gallery">
-      <img src="/images/img_jpeg_10.jpg" alt="Sunmay TCM Clinic reception counter with curved wood design and greenery" loading="lazy">
-      <img src="/images/img_jpeg_02.jpg" alt="Sunmay TCM Clinic waiting area with natural light and wood benches" loading="lazy">
-      <img src="/images/img_jpeg_06.jpg" alt="Sunmay TCM Clinic reception desk" loading="lazy">
     </div>
   </section>
 

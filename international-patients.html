@@ -192,7 +192,8 @@ a { color: inherit; text-decoration: none; }
 
 nav { position: sticky; top: 0; z-index: 100; background: rgba(250,250,247,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(64,114,72,0.12); }
 .nav-inner { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 1.5rem; height: 64px; }
-.nav-logo { font-family: var(--display); font-size: 1.15rem; font-weight: 700; color: var(--green); letter-spacing: 0.04em; }
+.nav-logo { display: flex; align-items: center; font-family: var(--display); font-size: 1.15rem; font-weight: 700; color: var(--green); letter-spacing: 0.04em; }
+.nav-logo img { height: 40px; width: auto; display: block; }
 .nav-links { display: flex; align-items: center; gap: 1.25rem; font-size: 0.9rem; color: var(--text-mid); }
 .nav-links a:hover { color: var(--green); }
 .nav-line-btn { background: var(--green); color: #fff; padding: 0.45rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
@@ -241,6 +242,9 @@ h2 { font-family: var(--display); font-size: 1.65rem; font-weight: 700; color: v
 .doctor-creds { list-style: none; margin-top: 1.1rem; max-width: 42em; }
 .doctor-creds li { padding-left: 1.4em; position: relative; color: var(--text-mid); font-size: 0.92rem; margin-top: 0.4rem; }
 .doctor-creds li::before { content: "✓"; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+
+.space-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+.space-gallery img { width: 100%; height: 220px; object-fit: cover; border-radius: 12px; display: block; }
 
 .treatment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
 .treatment-card { background: #fff; border: 1px solid rgba(64,114,72,0.15); border-radius: 12px; padding: 1.5rem 1.6rem; display: flex; flex-direction: column; }
@@ -295,7 +299,7 @@ footer a { color: var(--cream); }
 
 <nav role="banner" aria-label="Main navigation">
   <div class="nav-inner">
-    <a href="/" class="nav-logo">Sunmay TCM Clinic</a>
+    <a href="/" class="nav-logo" aria-label="Sunmay TCM Clinic home"><img src="/images/img_png_01.png" alt="Sunmay TCM Clinic Logo"></a>
     <div class="nav-links">
       <a href="/" class="hide-m">中文首頁</a>
       <a href="#doctor" class="hide-m">Doctor</a>
@@ -355,6 +359,15 @@ footer a { color: var(--cream); }
     <div class="mini-cta">
       <p>Ready to check availability for your travel dates? Message us directly on LINE.</p>
       <a href="https://line.me/R/ti/p/@068ohdvi" target="_blank" rel="noopener" class="line-btn" onclick="gtag('event','click_line',{'event_category':'contact','event_label':'LINE-international-why'});"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> Add us on LINE</a>
+    </div>
+  </section>
+
+  <section aria-labelledby="space-title">
+    <h2 id="space-title">Our Space</h2>
+    <div class="space-gallery">
+      <img src="/images/img_jpeg_10.jpg" alt="Sunmay TCM Clinic reception counter with curved wood design and greenery" loading="lazy">
+      <img src="/images/img_jpeg_02.jpg" alt="Sunmay TCM Clinic waiting area with natural light and wood benches" loading="lazy">
+      <img src="/images/img_jpeg_06.jpg" alt="Sunmay TCM Clinic reception desk" loading="lazy">
     </div>
   </section>
 
@@ -544,6 +557,7 @@ footer a { color: var(--cream); }
 </main>
 
 <footer>
+  <img src="/images/img_png_02.png" alt="Sunmay TCM Clinic Logo" style="height:36px;width:auto;margin:0 auto 0.75rem;filter:brightness(0) invert(1) sepia(1) saturate(0.4) hue-rotate(90deg) brightness(1.5);">
   <div>Sunmay TCM Clinic 森美中醫診所</div>
   <div>No. 20, Alley 15, Lane 266, Sec. 4, Renai Rd., Da'an Dist., Taipei City 106, Taiwan｜<a href="tel:+886227010768">+886-2-2701-0768</a></div>
   <div><a href="/">中文首頁 Chinese homepage</a>｜<a href="/#treatments">All treatments</a></div>

@@ -265,14 +265,40 @@ h2 { font-family: var(--display); font-size: 1.65rem; font-weight: 700; color: v
 .notes-box li + li { margin-top: 0.6rem; }
 .notes-box li::before { content: "•"; position: absolute; left: 0.3em; color: var(--sand); font-weight: 700; }
 
-.faq-item { border: 1px solid rgba(64,114,72,0.15); border-radius: 10px; margin-bottom: 0.75rem; background: #fff; }
-.faq-item summary { cursor: pointer; padding: 1rem 1.25rem; font-weight: 600; color: var(--text-dark); list-style: none; position: relative; padding-right: 2.5rem; }
-.faq-item summary::-webkit-details-marker { display: none; }
-.faq-item summary::after { content: "+"; position: absolute; right: 1.25rem; top: 50%; transform: translateY(-50%); color: var(--green); font-size: 1.2rem; }
-.faq-item[open] summary::after { content: "−"; }
-.faq-item p { padding: 0 1.25rem 1.1rem; color: var(--text-mid); font-size: 0.95rem; }
+.faq-list { max-width: 760px; margin: 2rem auto 0; }
 
-.faq-hours { padding: 0 1.25rem 1.1rem; }
+.faq-item {
+  border-bottom: 1px solid rgba(173,162,141,0.3);
+}
+
+.faq-question {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 1rem; padding: 1.4rem 0; cursor: pointer;
+  font-size: 1.05rem; font-weight: 600; color: var(--text-dark);
+  transition: color 0.2s;
+}
+
+.faq-question:hover { color: var(--green); }
+
+.faq-toggle {
+  width: 24px; height: 24px; border-radius: 50%;
+  border: 1.5px solid rgba(64,114,72,0.3);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; color: var(--green);
+  transition: all 0.3s; flex-shrink: 0;
+}
+
+.faq-item.open .faq-toggle { background: var(--green); color: #fff; transform: rotate(45deg); }
+
+.faq-answer {
+  font-size: 0.95rem; color: var(--text-mid);
+  line-height: 1.7; max-height: 0; overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s;
+}
+
+.faq-item.open .faq-answer { max-height: 600px; padding-bottom: 1.25rem; }
+
+.faq-hours { padding-top: 0.25rem; }
 .doctor-hours { margin: 2rem auto 0; padding-top: 1.75rem; border-top: 1px solid rgba(64,114,72,0.15); max-width: 460px; text-align: center; }
 .doctor-hours-label { font-weight: 700; color: var(--green-dark); margin-bottom: 0.9rem; }
 .doctor-hours-label span { font-weight: 400; color: var(--text-muted); font-size: 0.85em; }
@@ -490,70 +516,117 @@ footer a { color: var(--cream); }
 
   <section aria-labelledby="faq-title" id="faq">
     <h2 id="faq-title">Frequently Asked Questions</h2>
-    <details class="faq-item">
-      <summary>Do you accept international or tourist patients?</summary>
-      <p>Yes. We welcome both short-term visitors to Taipei and international residents living and working here, including patients seeking self-pay treatments such as facial acupuncture, acupotomy, Fu's subcutaneous needling, and TCM weight loss. We recommend booking in advance via LINE so we can prepare for your visit.</p>
-    </details>
-    <details class="faq-item">
-      <summary>Can I get a receipt or medical certificate for my overseas insurance claim?</summary>
-      <p>Yes. For international patients who need documents for overseas insurance claims, we can provide medical receipts and relevant documentation upon request. Reimbursement depends on your individual insurance policy and provider — we recommend confirming your insurer's required format with us before your visit.</p>
-    </details>
-    <details class="faq-item">
-      <summary>Do the doctors speak English?</summary>
-      <p>English consultations are available with our English-speaking TCM doctor, Dr. Tung.</p>
-    </details>
-    <details class="faq-item">
-      <summary>What are Dr. Tung's clinic hours?</summary>
-      <div class="faq-hours">
-        <div class="hours-grid">
-          <div class="hours-row">
-            <span class="hours-day">Tue</span>
-            <span class="hours-times">
-              <span class="hours-time">14:00–17:30</span>
-              <span class="hours-break">break</span>
-              <span class="hours-time">18:00–21:00</span>
-            </span>
-          </div>
-          <div class="hours-row">
-            <span class="hours-day">Wed</span>
-            <span class="hours-times">
-              <span class="hours-time">10:00–13:30</span>
-              <span class="hours-break">break</span>
-              <span class="hours-time">14:00–17:30</span>
-            </span>
-          </div>
-          <div class="hours-row">
-            <span class="hours-day">Thu</span>
-            <span class="hours-times"><span class="hours-time">10:00–13:30</span></span>
-          </div>
-          <div class="hours-row">
-            <span class="hours-day">Sat</span>
-            <span class="hours-times"><span class="hours-time">13:30–17:00</span></span>
+    <div class="faq-list" role="list">
+      <div class="faq-item" role="listitem">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          Do you accept international or tourist patients?
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes. We welcome both short-term visitors to Taipei and international residents living and working here, including patients seeking self-pay treatments such as facial acupuncture, acupotomy, Fu's subcutaneous needling, and TCM weight loss. We recommend booking in advance via LINE so we can prepare for your visit.</p>
+        </div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          Can I get a receipt or medical certificate for my overseas insurance claim?
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes. For international patients who need documents for overseas insurance claims, we can provide medical receipts and relevant documentation upon request. Reimbursement depends on your individual insurance policy and provider — we recommend confirming your insurer's required format with us before your visit.</p>
+        </div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          Do the doctors speak English?
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>English consultations are available with our English-speaking TCM doctor, Dr. Tung.</p>
+        </div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          What are Dr. Tung's clinic hours?
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-hours">
+            <div class="hours-grid">
+              <div class="hours-row">
+                <span class="hours-day">Tue</span>
+                <span class="hours-times">
+                  <span class="hours-time">14:00–17:30</span>
+                  <span class="hours-break">break</span>
+                  <span class="hours-time">18:00–21:00</span>
+                </span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Wed</span>
+                <span class="hours-times">
+                  <span class="hours-time">10:00–13:30</span>
+                  <span class="hours-break">break</span>
+                  <span class="hours-time">14:00–17:30</span>
+                </span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Thu</span>
+                <span class="hours-times"><span class="hours-time">10:00–13:30</span></span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Sat</span>
+                <span class="hours-times"><span class="hours-time">13:30–17:00</span></span>
+              </div>
+            </div>
+            <p class="hours-note">Taipei time · There's a short break between morning/afternoon and afternoon/evening sessions · Check-in closes 15 min before each session ends · Hours may be adjusted — confirm via LINE before planning your visit.</p>
           </div>
         </div>
-        <p class="hours-note">Taipei time · There's a short break between morning/afternoon and afternoon/evening sessions · Check-in closes 15 min before each session ends · Hours may be adjusted — confirm via LINE before planning your visit.</p>
       </div>
-    </details>
-    <details class="faq-item">
-      <summary>Can I complete a treatment course during a short trip to Taipei?</summary>
-      <p>It depends on the treatment. Acupotomy and Fu's subcutaneous needling often show noticeable results within 1-3 sessions, and facial acupuncture can be scheduled across consecutive visits. Our doctors will assess your condition and suggest a visit schedule that fits your travel dates. If you live and work in Taipei, we're also happy to plan ongoing care around your regular schedule rather than a single trip.</p>
-    </details>
-    <details class="faq-item">
-      <summary>Can herbal formulas be made vegetarian?</summary>
-      <p>Yes. Many of our herbal prescriptions can be adjusted to avoid animal-derived ingredients. Just let us know your dietary preference when you book or during your consultation, and our doctors will plan your formula accordingly.</p>
-    </details>
-    <details class="faq-item">
-      <summary>Can I get a longer supply of herbal medicine to take home with me?</summary>
-      <p>Yes. Depending on your condition, Dr. Tung can prescribe herbal medicine for anywhere from one week up to three months, so you can continue your treatment after you return home. If you need supporting documentation for customs or airport requirements when traveling with your medication, just let us know in advance and we can prepare it.</p>
-    </details>
-    <details class="faq-item">
-      <summary>How do I book an appointment as an international patient?</summary>
-      <p>The easiest way is to message our LINE official account (@068ohdvi) with your preferred dates, the treatment you're interested in, and any insurance documentation needs. You can also email us at <a href="mailto:sunmay266@gmail.com" style="color:var(--green);font-weight:600;">sunmay266@gmail.com</a> or call +886-2-2701-0768.</p>
-    </details>
-    <details class="faq-item">
-      <summary>What payment methods do you accept?</summary>
-      <p>We accept cash (NTD) and bank transfer to a Taiwan bank account for self-pay treatments. We do not accept credit cards. Please note that insurance reimbursement is processed by your own insurance provider after your visit, not directly by our clinic.</p>
-    </details>
+      <div class="faq-item" role="listitem">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          Can I complete a treatment course during a short trip to Taipei?
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>It depends on the treatment. Acupotomy and Fu's subcutaneous needling often show noticeable results within 1-3 sessions, and facial acupuncture can be scheduled across consecutive visits. Our doctors will assess your condition and suggest a visit schedule that fits your travel dates. If you live and work in Taipei, we're also happy to plan ongoing care around your regular schedule rather than a single trip.</p>
+        </div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          Can herbal formulas be made vegetarian?
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes. Many of our herbal prescriptions can be adjusted to avoid animal-derived ingredients. Just let us know your dietary preference when you book or during your consultation, and our doctors will plan your formula accordingly.</p>
+        </div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          Can I get a longer supply of herbal medicine to take home with me?
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes. Depending on your condition, Dr. Tung can prescribe herbal medicine for anywhere from one week up to three months, so you can continue your treatment after you return home. If you need supporting documentation for customs or airport requirements when traveling with your medication, just let us know in advance and we can prepare it.</p>
+        </div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          How do I book an appointment as an international patient?
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>The easiest way is to message our LINE official account (@068ohdvi) with your preferred dates, the treatment you're interested in, and any insurance documentation needs. You can also email us at <a href="mailto:sunmay266@gmail.com" style="color:var(--green);font-weight:600;">sunmay266@gmail.com</a> or call +886-2-2701-0768.</p>
+        </div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          What payment methods do you accept?
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>We accept cash (NTD) and bank transfer to a Taiwan bank account for self-pay treatments. We do not accept credit cards. Please note that insurance reimbursement is processed by your own insurance provider after your visit, not directly by our clinic.</p>
+        </div>
+      </div>
+    </div>
     <p class="disclaimer">※ Treatment outcomes vary by individual condition. This page is for general information and does not replace professional medical diagnosis.</p>
   </section>
 
@@ -583,6 +656,30 @@ footer a { color: var(--cream); }
   <div><a href="https://maps.app.goo.gl/VXsT5TSHx28kFdf76" target="_blank" rel="noopener">No. 20, Alley 15, Lane 266, Sec. 4, Renai Rd., Da'an Dist., Taipei City 106, Taiwan</a>｜<a href="tel:+886227010768">+886-2-2701-0768</a></div>
   <div><a href="/">中文首頁 Chinese homepage</a>｜<a href="/#treatments">All treatments</a></div>
 </footer>
+
+<script>
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', false);
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', true);
+    }
+  });
+
+  btn.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      btn.click();
+    }
+  });
+});
+</script>
 
 </body>
 </html>

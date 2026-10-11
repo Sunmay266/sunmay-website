@@ -22,6 +22,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 | `exosome-hair.html` | 外泌體養髮 |
 | `pediatric-growth.html` | 小兒轉骨 |
 | `sanfu-sanjiu.html` | 三伏貼・三九貼（穴位敷貼） |
+| `sports-medicine.html` | 中醫運動醫學（董芯羽中醫師主治） |
+| `stroke-rehabilitation.html` | 中風後遺症治療 |
 
 - 線上網址為無副檔名形式（Cloudflare Pages 自動處理）：`/treatments/weight-loss`
 - 每頁含獨立 SEO meta、canonical、JSON-LD `@graph`（BreadcrumbList / MedicalWebPage / MedicalTherapy+Service / FAQPage），`provider` 以 `@id` 指回首頁的 `#clinic` 實體

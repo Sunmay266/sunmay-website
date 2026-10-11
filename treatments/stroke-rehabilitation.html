@@ -179,11 +179,32 @@ a { color: inherit; text-decoration: none; }
 nav { position: sticky; top: 0; z-index: 100; background: rgba(250,250,247,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(64,114,72,0.12); }
 .nav-inner { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 1.5rem; height: 64px; }
 .nav-logo { display: flex; align-items: center; }
-.nav-links { display: flex; align-items: center; gap: 1.25rem; font-size: 0.9rem; color: var(--text-mid); }
-.nav-links a:hover { color: var(--green); }
-.nav-line-btn { background: var(--green); color: #fff; padding: 0.45rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+.nav-links { display: flex; align-items: center; gap: 0.15rem; list-style: none; }
+.nav-links a { font-size: 0.95rem; color: var(--text-mid); padding: 0.5rem 0.65rem; border-radius: 4px; transition: color 0.2s, background 0.2s; }
+.nav-links a:hover { color: var(--green); background: rgba(64,114,72,0.06); }
+.nav-cta { background: var(--green) !important; color: #fff !important; border-radius: 6px !important; padding: 0.5rem 1.1rem !important; font-weight: 500; transition: background 0.2s !important; }
+.nav-cta:hover { background: var(--green-dark) !important; }
+.nav-dropdown { position: relative; }
+.nav-dropdown-arrow { display: inline-block; margin-left: 0.3rem; font-size: 0.7em; transition: transform 0.2s; }
+.nav-dropdown:hover .nav-dropdown-arrow, .nav-dropdown:focus-within .nav-dropdown-arrow { transform: rotate(180deg); }
+.nav-dropdown-menu { position: absolute; top: 100%; left: 0; min-width: 160px; margin-top: 0.4rem; background: var(--white); border-radius: 8px; box-shadow: 0 10px 30px rgba(45,82,53,0.15); border: 1px solid rgba(64,114,72,0.1); padding: 0.4rem; list-style: none; opacity: 0; visibility: hidden; transform: translateY(6px); transition: opacity 0.2s, transform 0.2s, visibility 0.2s; z-index: 200; }
+.nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown:focus-within .nav-dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.nav-dropdown-menu a { display: block; padding: 0.55rem 0.9rem; font-size: 0.95rem; white-space: nowrap; border-radius: 5px; }
+.nav-dropdown-menu--wide { display: grid; grid-template-columns: 1fr 1fr; gap: 0 0.25rem; min-width: 380px; }
+.nav-line-btn { display: none; flex-direction: column; align-items: center; line-height: 1.3; text-align: center; background: var(--green); color: #fff; padding: 0.45rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
 .nav-line-btn:hover { background: var(--green-dark); color: #fff; }
-@media (max-width: 640px) { .nav-links .hide-m { display: none; } }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--green); transition: 0.3s; }
+.mobile-menu { display: none; flex-direction: column; position: fixed; top: 64px; left: 0; right: 0; bottom: 0; background: var(--white); z-index: 99; padding: 2rem; gap: 0.25rem; overflow-y: auto; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { font-size: 1rem; color: var(--text-mid); padding: 0.9rem 0; border-bottom: 1px solid rgba(173,162,141,0.15); letter-spacing: 0.05em; }
+.mobile-sublink { padding-left: 1.5rem !important; font-size: 0.9rem !important; color: var(--text-muted) !important; }
+.mobile-cta-link { margin-top: 1rem; background: var(--green); color: var(--white) !important; text-align: center; border-radius: 8px; padding: 1rem !important; font-weight: 600; border-bottom: none !important; }
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-line-btn { display: flex; }
+  .hamburger { display: flex; }
+}
 
 .breadcrumbs { max-width: 1080px; margin: 0 auto; padding: 1rem 1.5rem 0; font-size: 0.82rem; color: var(--text-muted); }
 .breadcrumbs a:hover { color: var(--green); }
@@ -260,13 +281,67 @@ footer a { color: var(--cream); }
 <nav aria-label="主選單">
   <div class="nav-inner">
     <a href="/" class="nav-logo" aria-label="森美中醫診所首頁"><img src="/images/img_png_01.png" alt="森美中醫診所 Sunmay TCM Clinic Logo" style="height:38px;width:auto;display:block;"></a>
-    <div class="nav-links">
-      <a href="/#treatments" class="hide-m">診療項目</a>
-      <a href="/#schedule" class="hide-m">診療時間</a>
-      <a href="/#doctor" class="hide-m">醫師介紹</a>
-      <a href="https://line.me/R/ti/p/@068ohdvi" target="_blank" rel="noopener" class="nav-line-btn" onclick="gtag('event','click_line',{'event_category':'contact','event_label':'LINE官方帳號-中風後遺症頁'});">LINE 掛號</a>
-    </div>
+    <ul class="nav-links" role="list">
+      <li><a href="/#about">關於森美</a></li>
+      <li><a href="/#schedule">診療時間</a></li>
+      <li class="nav-dropdown">
+        <a href="/#doctor">醫師介紹<span class="nav-dropdown-arrow" aria-hidden="true">▾</span></a>
+        <ul class="nav-dropdown-menu" role="list">
+          <li><a href="/#doctor-lee">李俊儀醫師</a></li>
+          <li><a href="/#doctor-dong">董芯羽醫師</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <a href="/#treatments">診療項目<span class="nav-dropdown-arrow" aria-hidden="true">▾</span></a>
+        <ul class="nav-dropdown-menu nav-dropdown-menu--wide" role="list">
+          <li><a href="/treatments/weight-loss">中醫減重</a></li>
+          <li><a href="/treatments/acupotomy">超微針刀</a></li>
+          <li><a href="/treatments/fu-needling">浮針療法</a></li>
+          <li><a href="/treatments/acupuncture">針灸療程</a></li>
+          <li><a href="/treatments/facial-acupuncture">美顏針</a></li>
+          <li><a href="/treatments/embedding">埋線療程</a></li>
+          <li><a href="/treatments/gynecology">婦科調理</a></li>
+          <li><a href="/treatments/exosome-hair">外泌體養髮</a></li>
+          <li><a href="/treatments/pediatric-growth">小兒轉骨</a></li>
+          <li><a href="/treatments/sanfu-sanjiu">三伏貼・三九貼</a></li>
+          <li><a href="/treatments/sports-medicine">中醫運動醫學</a></li>
+          <li><a href="/treatments/stroke-rehabilitation">中風後遺症治療</a></li>
+        </ul>
+      </li>
+      <li><a href="/#faq">常見問題</a></li>
+      <li><a href="/international-patients">English</a></li>
+      <li><a href="https://gptcm.tw/GPNET/MainGo?CID=NATCM" target="_blank" rel="noopener" class="nav-cta">立即預約</a></li>
+    </ul>
+    <a href="https://line.me/R/ti/p/@068ohdvi" target="_blank" rel="noopener" class="nav-line-btn" onclick="gtag('event','click_line',{'event_category':'contact','event_label':'LINE官方帳號-中風後遺症頁'});"><span>LINE</span><span>掛號</span></a>
+    <button class="hamburger" id="hamburger" aria-label="開啟選單" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<nav class="mobile-menu" id="mobile-menu" role="navigation" aria-label="行動版選單">
+  <a href="/#about" onclick="closeMobile()">關於森美</a>
+  <a href="/#schedule" onclick="closeMobile()">診療時間</a>
+  <a href="/#doctor" onclick="closeMobile()">醫師介紹</a>
+  <a href="/#doctor-lee" class="mobile-sublink" onclick="closeMobile()">－ 李俊儀醫師</a>
+  <a href="/#doctor-dong" class="mobile-sublink" onclick="closeMobile()">－ 董芯羽醫師</a>
+  <a href="/#treatments" onclick="closeMobile()">診療項目</a>
+  <a href="/treatments/weight-loss" class="mobile-sublink">－ 中醫減重</a>
+  <a href="/treatments/acupotomy" class="mobile-sublink">－ 超微針刀</a>
+  <a href="/treatments/fu-needling" class="mobile-sublink">－ 浮針療法</a>
+  <a href="/treatments/acupuncture" class="mobile-sublink">－ 針灸療程</a>
+  <a href="/treatments/facial-acupuncture" class="mobile-sublink">－ 美顏針</a>
+  <a href="/treatments/embedding" class="mobile-sublink">－ 埋線療程</a>
+  <a href="/treatments/gynecology" class="mobile-sublink">－ 婦科調理</a>
+  <a href="/treatments/exosome-hair" class="mobile-sublink">－ 外泌體養髮</a>
+  <a href="/treatments/pediatric-growth" class="mobile-sublink">－ 小兒轉骨</a>
+  <a href="/treatments/sanfu-sanjiu" class="mobile-sublink">－ 三伏貼・三九貼</a>
+  <a href="/treatments/sports-medicine" class="mobile-sublink">－ 中醫運動醫學</a>
+  <a href="/treatments/stroke-rehabilitation" class="mobile-sublink">－ 中風後遺症治療</a>
+  <a href="/#faq" onclick="closeMobile()">常見問題</a>
+  <a href="/international-patients" onclick="closeMobile()">English</a>
+  <a href="https://gptcm.tw/GPNET/MainGo?CID=NATCM" target="_blank" rel="noopener" class="mobile-cta-link">立即線上預約</a>
 </nav>
 
 <div class="breadcrumbs" aria-label="麵包屑導覽">
@@ -397,6 +472,23 @@ footer a { color: var(--cream); }
   <div>台北市大安區仁愛路四段 266 巷 15 弄 20 號｜<a href="tel:0227010768">02-2701-0768</a></div>
   <div><a href="/">回首頁</a>｜<a href="/#treatments">全部診療項目</a>｜<a href="/#faq">常見問題</a></div>
 </footer>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+
+hamburger.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+
+function closeMobile() {
+  mobileMenu.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', false);
+  document.body.style.overflow = '';
+}
+</script>
 
 </body>
 </html>

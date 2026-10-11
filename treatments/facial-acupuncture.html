@@ -183,7 +183,7 @@ a { color: inherit; text-decoration: none; }
 
 nav { position: sticky; top: 0; z-index: 100; background: rgba(250,250,247,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(64,114,72,0.12); }
 .nav-inner { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 1.5rem; height: 64px; }
-.nav-logo { font-size: 1.05rem; font-weight: 600; color: var(--green); letter-spacing: 0.08em; }
+.nav-logo { display: flex; align-items: center; }
 .nav-links { display: flex; align-items: center; gap: 1.25rem; font-size: 0.9rem; color: var(--text-mid); }
 .nav-links a:hover { color: var(--green); }
 .nav-line-btn { background: var(--green); color: #fff; padding: 0.45rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
@@ -264,7 +264,7 @@ footer a { color: var(--cream); }
 
 <nav aria-label="主選單">
   <div class="nav-inner">
-    <a href="/" class="nav-logo">森美中醫診所</a>
+    <a href="/" class="nav-logo" aria-label="森美中醫診所首頁"><img src="/images/img_png_01.png" alt="森美中醫診所 Sunmay TCM Clinic Logo" style="height:38px;width:auto;display:block;"></a>
     <div class="nav-links">
       <a href="/#treatments" class="hide-m">診療項目</a>
       <a href="/#schedule" class="hide-m">診療時間</a>

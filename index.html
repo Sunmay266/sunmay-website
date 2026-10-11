@@ -688,6 +688,43 @@ nav {
 
 .nav-links a:hover { color: var(--green); background: rgba(64,114,72,0.06); }
 
+.nav-dropdown { position: relative; }
+
+.nav-dropdown-arrow {
+  display: inline-block; margin-left: 0.3rem;
+  font-size: 0.7em; transition: transform 0.2s;
+}
+
+.nav-dropdown:hover .nav-dropdown-arrow,
+.nav-dropdown:focus-within .nav-dropdown-arrow { transform: rotate(180deg); }
+
+.nav-dropdown-menu {
+  position: absolute; top: 100%; left: 0;
+  min-width: 160px; margin-top: 0.4rem;
+  background: var(--white); border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(45,82,53,0.15);
+  border: 1px solid rgba(64,114,72,0.1);
+  padding: 0.4rem; list-style: none;
+  opacity: 0; visibility: hidden; transform: translateY(6px);
+  transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+  z-index: 200;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1; visibility: visible; transform: translateY(0);
+}
+
+.nav-dropdown-menu a {
+  display: block; padding: 0.55rem 0.9rem;
+  font-size: 1rem; white-space: nowrap; border-radius: 5px;
+}
+
+.nav-dropdown-menu--wide {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0 0.25rem; min-width: 380px;
+}
+
 .nav-cta {
   background: var(--green) !important;
   color: var(--white) !important;
@@ -957,6 +994,7 @@ section { padding: 6rem 0; }
 .doctor-inner {
   display: grid; grid-template-columns: 420px 1fr;
   gap: 6rem; align-items: start;
+  scroll-margin-top: 90px;
 }
 
 .doctor-inner + .doctor-inner { margin-top: 5rem; }
@@ -1422,6 +1460,12 @@ footer {
   letter-spacing: 0.05em;
 }
 
+.mobile-sublink {
+  padding-left: 1.5rem !important;
+  font-size: 0.9rem !important;
+  color: var(--text-muted) !important;
+}
+
 .mobile-cta-link {
   margin-top: 1rem;
   background: var(--green); color: var(--white) !important;
@@ -1500,8 +1544,30 @@ footer {
 
     <ul class="nav-links" role="list">
       <li><a href="#about">關於森美</a></li>
-      <li><a href="#doctor">醫師介紹</a></li>
-      <li><a href="#treatments">診療項目</a></li>
+      <li class="nav-dropdown">
+        <a href="#doctor">醫師介紹<span class="nav-dropdown-arrow" aria-hidden="true">▾</span></a>
+        <ul class="nav-dropdown-menu" role="list">
+          <li><a href="#doctor-lee">李俊儀醫師</a></li>
+          <li><a href="#doctor-dong">董芯羽醫師</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <a href="#treatments">診療項目<span class="nav-dropdown-arrow" aria-hidden="true">▾</span></a>
+        <ul class="nav-dropdown-menu nav-dropdown-menu--wide" role="list">
+          <li><a href="/treatments/weight-loss">中醫減重</a></li>
+          <li><a href="/treatments/acupotomy">超微針刀</a></li>
+          <li><a href="/treatments/fu-needling">浮針療法</a></li>
+          <li><a href="/treatments/acupuncture">針灸療程</a></li>
+          <li><a href="/treatments/facial-acupuncture">美顏針</a></li>
+          <li><a href="/treatments/embedding">埋線療程</a></li>
+          <li><a href="/treatments/gynecology">婦科調理</a></li>
+          <li><a href="/treatments/exosome-hair">外泌體養髮</a></li>
+          <li><a href="/treatments/pediatric-growth">小兒轉骨</a></li>
+          <li><a href="/treatments/sanfu-sanjiu">三伏貼・三九貼</a></li>
+          <li><a href="/treatments/sports-medicine">中醫運動醫學</a></li>
+          <li><a href="/treatments/stroke-rehabilitation">中風後遺症治療</a></li>
+        </ul>
+      </li>
       <li><a href="#schedule">診療時間</a></li>
       <li><a href="#faq">常見問題</a></li>
       <li><a href="/international-patients">English</a></li>
@@ -1520,7 +1586,21 @@ footer {
 <nav class="mobile-menu" id="mobile-menu" role="navigation" aria-label="行動版選單">
   <a href="#about" onclick="closeMobile()">關於森美</a>
   <a href="#doctor" onclick="closeMobile()">醫師介紹</a>
+  <a href="#doctor-lee" class="mobile-sublink" onclick="closeMobile()">－ 李俊儀醫師</a>
+  <a href="#doctor-dong" class="mobile-sublink" onclick="closeMobile()">－ 董芯羽醫師</a>
   <a href="#treatments" onclick="closeMobile()">診療項目</a>
+  <a href="/treatments/weight-loss" class="mobile-sublink">－ 中醫減重</a>
+  <a href="/treatments/acupotomy" class="mobile-sublink">－ 超微針刀</a>
+  <a href="/treatments/fu-needling" class="mobile-sublink">－ 浮針療法</a>
+  <a href="/treatments/acupuncture" class="mobile-sublink">－ 針灸療程</a>
+  <a href="/treatments/facial-acupuncture" class="mobile-sublink">－ 美顏針</a>
+  <a href="/treatments/embedding" class="mobile-sublink">－ 埋線療程</a>
+  <a href="/treatments/gynecology" class="mobile-sublink">－ 婦科調理</a>
+  <a href="/treatments/exosome-hair" class="mobile-sublink">－ 外泌體養髮</a>
+  <a href="/treatments/pediatric-growth" class="mobile-sublink">－ 小兒轉骨</a>
+  <a href="/treatments/sanfu-sanjiu" class="mobile-sublink">－ 三伏貼・三九貼</a>
+  <a href="/treatments/sports-medicine" class="mobile-sublink">－ 中醫運動醫學</a>
+  <a href="/treatments/stroke-rehabilitation" class="mobile-sublink">－ 中風後遺症治療</a>
   <a href="#schedule" onclick="closeMobile()">診療時間</a>
   <a href="#faq" onclick="closeMobile()">常見問題</a>
   <a href="/international-patients" onclick="closeMobile()">English</a>
@@ -1605,7 +1685,7 @@ footer {
 <!-- DOCTOR -->
 <section class="doctor" id="doctor" aria-labelledby="doctor-title">
   <div class="container">
-    <div class="doctor-inner">
+    <div class="doctor-inner" id="doctor-lee">
       <div>
         <div class="doctor-photo-wrap">
           <img
@@ -1709,7 +1789,7 @@ footer {
 
     <hr class="doctor-divider">
 
-    <div class="doctor-inner">
+    <div class="doctor-inner" id="doctor-dong">
       <div>
         <div class="doctor-photo-wrap">
           <img
@@ -2448,14 +2528,18 @@ footer {
       <div>
         <h4>診療項目</h4>
         <ul class="footer-links">
-          <li><a href="#treatments">中醫減重</a></li>
-          <li><a href="#treatments">超微針刀</a></li>
-          <li><a href="#treatments">針灸療程</a></li>
-          <li><a href="#treatments">美顏針</a></li>
-          <li><a href="#treatments">埋線療程</a></li>
-          <li><a href="#treatments">婦科調理</a></li>
-          <li><a href="#treatments">外泌體養髮</a></li>
-          <li><a href="#treatments">小兒轉骨</a></li>
+          <li><a href="/treatments/weight-loss">中醫減重</a></li>
+          <li><a href="/treatments/acupotomy">超微針刀</a></li>
+          <li><a href="/treatments/fu-needling">浮針療法</a></li>
+          <li><a href="/treatments/acupuncture">針灸療程</a></li>
+          <li><a href="/treatments/facial-acupuncture">美顏針</a></li>
+          <li><a href="/treatments/embedding">埋線療程</a></li>
+          <li><a href="/treatments/gynecology">婦科調理</a></li>
+          <li><a href="/treatments/exosome-hair">外泌體養髮</a></li>
+          <li><a href="/treatments/pediatric-growth">小兒轉骨</a></li>
+          <li><a href="/treatments/sanfu-sanjiu">三伏貼・三九貼</a></li>
+          <li><a href="/treatments/sports-medicine">中醫運動醫學</a></li>
+          <li><a href="/treatments/stroke-rehabilitation">中風後遺症治療</a></li>
         </ul>
       </div>
 

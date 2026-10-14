@@ -96,7 +96,7 @@
           "name": "Do you accept international or tourist patients?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. We welcome both short-term visitors to Taipei and international residents living and working here, including patients seeking self-pay treatments such as facial acupuncture, acupotomy, Fu's subcutaneous needling, and TCM weight loss. We recommend booking in advance via LINE so we can prepare for your visit."
+            "text": "Yes. We welcome both short-term visitors to Taipei and international residents living and working here, including patients seeking self-pay treatments such as facial acupuncture, acupotomy, Fu's subcutaneous needling, and TCM weight loss. We recommend booking in advance via LINE, or by emailing sunmay1520@gmail.com, so we can prepare for your visit."
           }
         },
         {
@@ -152,7 +152,7 @@
           "name": "How do I book an appointment as an international patient?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The easiest way is to message our LINE official account (@068ohdvi) with your preferred dates, the treatment you're interested in, and any insurance documentation needs. You can also email us at sunmay266@gmail.com or call +886-2-2701-0768."
+            "text": "The easiest way is to message our LINE official account (@068ohdvi) with your preferred dates, the treatment you're interested in, and any insurance documentation needs. You can also email us at sunmay1520@gmail.com or call +886-2-2701-0768."
           }
         },
         {
@@ -208,6 +208,10 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(250,250,247,0.95)
   .nav-links { display: none; }
   .hamburger { display: flex; }
 }
+
+.float-social { position: fixed; right: 1rem; bottom: 5rem; display: flex; flex-direction: column; gap: 0.6rem; z-index: 999; }
+.float-social a { width: 50px; height: 50px; border-radius: 50%; background: var(--green); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; box-shadow: 0 4px 14px rgba(64,114,72,0.45); transition: transform 0.2s, background 0.2s; }
+.float-social a:hover { background: var(--green-dark); transform: scale(1.08); }
 
 .breadcrumbs { max-width: 1080px; margin: 0 auto; padding: 1rem 1.5rem 0; font-size: 0.82rem; color: var(--text-muted); }
 .breadcrumbs a:hover { color: var(--green); }
@@ -308,7 +312,7 @@ h2 { font-family: var(--display); font-size: 1.65rem; font-weight: 700; color: v
 .faq-item.open .faq-answer { max-height: 600px; padding-bottom: 1.25rem; }
 
 .faq-hours { padding-top: 0.25rem; }
-.doctor-hours { margin: 2rem auto 0; padding-top: 1.75rem; border-top: 1px solid rgba(64,114,72,0.15); max-width: 460px; text-align: center; }
+.doctor-hours { margin: 2rem auto 0; padding-top: 1.75rem; border-top: 1px solid rgba(64,114,72,0.15); max-width: 460px; text-align: center; scroll-margin-top: 80px; }
 .doctor-hours-label { font-weight: 700; color: var(--green-dark); margin-bottom: 0.9rem; }
 .doctor-hours-label span { font-weight: 400; color: var(--text-muted); font-size: 0.85em; }
 .doctor-hours .hours-row { text-align: left; }
@@ -351,10 +355,11 @@ footer a { color: var(--cream); }
     <div class="nav-links">
       <a href="/">中文首頁</a>
       <a href="#doctor">Doctor</a>
+      <a href="#hours">Clinic Hours</a>
       <a href="#treatments">Treatments</a>
       <a href="#faq">FAQ</a>
-      <a href="https://line.me/R/ti/p/@068ohdvi" target="_blank" rel="noopener" class="nav-line-btn" onclick="gtag('event','click_line',{'event_category':'contact','event_label':'LINE-international-page'});">LINE</a>
     </div>
+    <a href="https://line.me/R/ti/p/@068ohdvi" target="_blank" rel="noopener" class="nav-line-btn" onclick="gtag('event','click_line',{'event_category':'contact','event_label':'LINE-international-page'});">LINE</a>
     <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -365,6 +370,7 @@ footer a { color: var(--cream); }
 <nav class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile menu">
   <a href="/" onclick="closeMobile()">中文首頁</a>
   <a href="#doctor" onclick="closeMobile()">Doctor</a>
+  <a href="#hours" onclick="closeMobile()">Clinic Hours</a>
   <a href="#treatments" onclick="closeMobile()">Treatments</a>
   <a href="#faq" onclick="closeMobile()">FAQ</a>
   <a href="https://line.me/R/ti/p/@068ohdvi" target="_blank" rel="noopener" class="mobile-cta-link" onclick="gtag('event','click_line',{'event_category':'contact','event_label':'LINE-international-mobile-menu'});">Message us on LINE</a>
@@ -453,7 +459,7 @@ footer a { color: var(--cream); }
         </ul>
       </div>
     </div>
-    <div class="doctor-hours">
+    <div class="doctor-hours" id="hours">
       <p class="doctor-hours-label">Dr. Tung's Clinic Hours <span>(Taipei time)</span></p>
       <div class="hours-grid">
         <div class="hours-row">
@@ -544,7 +550,7 @@ footer a { color: var(--cream); }
           <span class="faq-toggle" aria-hidden="true">+</span>
         </div>
         <div class="faq-answer">
-          <p>Yes. We welcome both short-term visitors to Taipei and international residents living and working here, including patients seeking self-pay treatments such as facial acupuncture, acupotomy, Fu's subcutaneous needling, and TCM weight loss. We recommend booking in advance via LINE so we can prepare for your visit.</p>
+          <p>Yes. We welcome both short-term visitors to Taipei and international residents living and working here, including patients seeking self-pay treatments such as facial acupuncture, acupotomy, Fu's subcutaneous needling, and TCM weight loss. We recommend booking in advance via LINE, or by emailing <a href="mailto:sunmay1520@gmail.com" style="color:var(--green);font-weight:600;">sunmay1520@gmail.com</a>, so we can prepare for your visit.</p>
         </div>
       </div>
       <div class="faq-item" role="listitem">
@@ -635,7 +641,7 @@ footer a { color: var(--cream); }
           <span class="faq-toggle" aria-hidden="true">+</span>
         </div>
         <div class="faq-answer">
-          <p>The easiest way is to message our LINE official account (@068ohdvi) with your preferred dates, the treatment you're interested in, and any insurance documentation needs. You can also email us at <a href="mailto:sunmay266@gmail.com" style="color:var(--green);font-weight:600;">sunmay266@gmail.com</a> or call +886-2-2701-0768.</p>
+          <p>The easiest way is to message our LINE official account (@068ohdvi) with your preferred dates, the treatment you're interested in, and any insurance documentation needs. You can also email us at <a href="mailto:sunmay1520@gmail.com" style="color:var(--green);font-weight:600;">sunmay1520@gmail.com</a> or call +886-2-2701-0768.</p>
         </div>
       </div>
       <div class="faq-item" role="listitem">
@@ -656,7 +662,7 @@ footer a { color: var(--cream); }
     <div class="cta-buttons">
       <a href="https://line.me/R/ti/p/@068ohdvi" target="_blank" rel="noopener" class="cta-line" onclick="gtag('event','click_line',{'event_category':'contact','event_label':'LINE-international-CTA'});">Message us on LINE</a>
       <a href="tel:+886227010768" class="cta-tel"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/></svg> +886-2-2701-0768</a>
-      <a href="mailto:sunmay266@gmail.com" class="cta-email" onclick="gtag('event','click_email',{'event_category':'contact','event_label':'Email-international-CTA'});"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg> sunmay266@gmail.com</a>
+      <a href="mailto:sunmay1520@gmail.com" class="cta-email" onclick="gtag('event','click_email',{'event_category':'contact','event_label':'Email-international-CTA'});"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg> sunmay1520@gmail.com</a>
     </div>
   </section>
 
@@ -677,6 +683,20 @@ footer a { color: var(--cream); }
   <div><a href="https://maps.app.goo.gl/VXsT5TSHx28kFdf76" target="_blank" rel="noopener">No. 20, Alley 15, Lane 266, Sec. 4, Renai Rd., Da'an Dist., Taipei City 106, Taiwan</a>｜<a href="tel:+886227010768">+886-2-2701-0768</a></div>
   <div><a href="/">中文首頁 Chinese homepage</a>｜<a href="/#treatments">All treatments</a></div>
 </footer>
+
+<div class="float-social" aria-label="Social media quick links">
+  <a href="https://www.facebook.com/profile.php?id=61588947069225" target="_blank" rel="noopener" aria-label="Facebook">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+  <a href="https://www.instagram.com/sunmay266" target="_blank" rel="noopener" aria-label="Instagram">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="white" stroke="none"/></svg>
+  </a>
+  <a href="https://line.me/R/ti/p/@068ohdvi" target="_blank" rel="noopener" aria-label="LINE" onclick="gtag('event','click_line',{'event_category':'contact','event_label':'LINE-international-float'});">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M12 0C5.373 0 0 4.973 0 11.073c0 5.48 4.635 10.022 10.985 10.909.425.09.891.298 1.021.548.105.218.069.661.034.905l-.148.849c-.045.254-.2.997.874.544 1.075-.453 5.791-3.431 7.898-5.849C22.459 17.016 24 14.158 24 11.073 24 4.973 18.627 0 12 0"/>
+    </svg>
+  </a>
+</div>
 
 <script>
 const hamburger = document.getElementById('hamburger');

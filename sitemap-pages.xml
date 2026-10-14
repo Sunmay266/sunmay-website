@@ -93,9 +93,15 @@
   </url>
   <url>
     <loc>https://www.sunmay266.com/treatments/fu-needling</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+
+    <image:image>
+      <image:loc>https://www.sunmay266.com/images/img_jpeg_21.jpg</image:loc>
+      <image:title>浮針療法治療實景</image:title>
+      <image:caption>森美中醫診所醫師以浮針專利管針為患者肩部進行掃散治療</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.sunmay266.com/treatments/sports-medicine</loc>

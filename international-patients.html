@@ -198,7 +198,16 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(250,250,247,0.95)
 .nav-links a:hover { color: var(--green); }
 .nav-line-btn { background: var(--green); color: #fff; padding: 0.45rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
 .nav-line-btn:hover { background: var(--green-dark); color: #fff; }
-@media (max-width: 640px) { .nav-links .hide-m { display: none; } }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--green); transition: 0.3s; }
+.mobile-menu { display: none; flex-direction: column; position: fixed; top: 64px; left: 0; right: 0; bottom: 0; background: var(--white); z-index: 99; padding: 2rem; gap: 0.25rem; overflow-y: auto; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { font-size: 1rem; color: var(--text-mid); padding: 0.9rem 0; border-bottom: 1px solid rgba(173,162,141,0.15); letter-spacing: 0.05em; }
+.mobile-cta-link { margin-top: 1rem; background: var(--green); color: var(--white) !important; text-align: center; border-radius: 8px; padding: 1rem !important; font-weight: 600; border-bottom: none !important; }
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+}
 
 .breadcrumbs { max-width: 1080px; margin: 0 auto; padding: 1rem 1.5rem 0; font-size: 0.82rem; color: var(--text-muted); }
 .breadcrumbs a:hover { color: var(--green); }
@@ -340,13 +349,25 @@ footer a { color: var(--cream); }
   <div class="nav-inner">
     <a href="/" class="nav-logo" aria-label="Sunmay TCM Clinic 森美中醫診所 home"><img src="/images/img_png_01.png" alt="Sunmay TCM Clinic 森美中醫診所 Logo"></a>
     <div class="nav-links">
-      <a href="/" class="hide-m">中文首頁</a>
-      <a href="#doctor" class="hide-m">Doctor</a>
-      <a href="#treatments" class="hide-m">Treatments</a>
-      <a href="#faq" class="hide-m">FAQ</a>
+      <a href="/">中文首頁</a>
+      <a href="#doctor">Doctor</a>
+      <a href="#treatments">Treatments</a>
+      <a href="#faq">FAQ</a>
       <a href="https://line.me/R/ti/p/@068ohdvi" target="_blank" rel="noopener" class="nav-line-btn" onclick="gtag('event','click_line',{'event_category':'contact','event_label':'LINE-international-page'});">LINE</a>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<nav class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile menu">
+  <a href="/" onclick="closeMobile()">中文首頁</a>
+  <a href="#doctor" onclick="closeMobile()">Doctor</a>
+  <a href="#treatments" onclick="closeMobile()">Treatments</a>
+  <a href="#faq" onclick="closeMobile()">FAQ</a>
+  <a href="https://line.me/R/ti/p/@068ohdvi" target="_blank" rel="noopener" class="mobile-cta-link" onclick="gtag('event','click_line',{'event_category':'contact','event_label':'LINE-international-mobile-menu'});">Message us on LINE</a>
 </nav>
 
 <div class="breadcrumbs" aria-label="Breadcrumb">
@@ -658,6 +679,21 @@ footer a { color: var(--cream); }
 </footer>
 
 <script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+
+hamburger.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+
+function closeMobile() {
+  mobileMenu.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', false);
+  document.body.style.overflow = '';
+}
+
 document.querySelectorAll('.faq-question').forEach(btn => {
   btn.addEventListener('click', () => {
     const item = btn.closest('.faq-item');
